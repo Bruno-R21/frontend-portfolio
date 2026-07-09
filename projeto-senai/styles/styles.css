@@ -1,0 +1,108 @@
+html {
+    font-size: 10px;
+    font-family: roboto, sans-serif;
+    color: bisque;
+    font-family: "Syne Mono", monospace;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 60px;
+    text-shadow: 3px 3px 1px #333;
+    text-align: center;    
+    color: #00ABDA;
+    
+}
+
+p {
+    font-size: 30px;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 1px;
+    color: black;
+ }
+
+li {
+    font-size: 24px;
+    line-height: 3;
+    text-align: center;
+    letter-spacing: 1px;
+    color: grey;
+}
+
+a {
+    font-size: 30px;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 1px;
+    color: gold; 
+}
+
+.destaque {
+    font-size: 60px;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 1px;
+    color: green;
+}
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 0 20px 20px 20px;
+    border: 5px solid #333;
+}
+img {
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+/* 1. Centraliza o botão na página */
+#Botao {
+    display: block;          /* Transforma o botão em bloco para permitir centralizar */
+    margin: 20px auto;       /* O "auto" centraliza nas laterais; o "20px" afasta de cima/baixo */
+    
+    /* 2. Muda o tamanho e formato */
+    padding: 12px 30px;      /* Espaçamento interno (altura e largura) */
+    font-size: 16px;         /* Tamanho da letra */
+    font-weight: bold;       /* Texto em negrito */
+    border-radius: 30px;     /* Deixa o botão com formato arredondado/pílula */
+    border: none;            /* Remove aquela borda padrão feia do navegador */
+    
+    /* 3. Muda as cores e comportamento */
+    background-color: #2563eb; /* Cor de fundo do botão (Ex: Azul moderno) */
+    color: white;            /* Cor do texto dentro do botão */
+    cursor: pointer;         /* Faz o mouse virar a "mãozinha" de clique */
+    transition: background 0.3s; /* Deixa a mudança de cor suave ao passar o mouse */
+}
+
+/* 4. Efeito opcional: Muda a cor quando você passa o mouse por cima */
+#Botao:hover {
+    background-color: #1d4ed8; /* Um azul um pouco mais escuro */
+}
+
+}
+/* 1. Centraliza todo o bloco na página */
+.container-interacao {
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Alinha verticalmente */
+    gap: 15px;               /* Dá um espaço entre os botões e números */
+    margin-top: 20px;        /* Afasta o bloco do conteúdo de cima */
+}
+
+/* 2. Aumenta o tamanho dos botões */
+.container-interacao button {
+    padding: 12px 24px;      /* Espaçamento interno (altura e largura) */
+    font-size: 18px;         /* Tamanho do texto do botão */
+    cursor: pointer;         /* Transforma a seta do mouse na mãozinha de clique */
+    border-radius: 8px;      /* Deixa os cantos do botão arredondados (opcional) */
+}
+
+/* 3. Muda a cor e o tamanho dos números dos contadores */
+#contador1, #contador2 {
+    font-size: 22px;         /* Deixa os números maiores e mais visíveis */
+    font-weight: bold;       /* Deixa o texto em negrito */
+    color: #007bff;          /* Cor dos números (Ex: Azul). Mude para a cor que preferir! */
+}
