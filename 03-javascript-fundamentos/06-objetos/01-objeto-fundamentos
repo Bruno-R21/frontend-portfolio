@@ -1,0 +1,56 @@
+// Introdução a objeto
+
+/*
+let aluno = {
+   nome: "Bruno",
+   idade: 42,
+   email: "baugusto_8@hotmail.com",
+   nota: 9.5
+}
+
+console.log(aluno.nome) // Bruno
+console.log(aluno.idade) // 42
+console.log(aluno.email) // baugusto_8@hotmail.com
+console.log(aluno.nota) // 9.5
+
+// Alterando a cor
+
+let carro = {
+   nome: "Toyota",
+   modelo: "Corolla",
+   ano: 2021,
+   cor: "Prata"
+}  
+
+carro.cor = "Vermelho"
+
+console.log(carro.nome) // Toyota
+console.log(carro.modelo) // Corolla
+console.log(carro.ano) // 2021
+console.log(carro.cor) // 1º Prata - 2º Vermelho 
+
+
+// Objetos com array
+
+
+let carros = [
+   {nome: "VW", modelo: "Fusca", ano: "1964", cor: "Azul"},
+   {nome: "chevrolet", modelo: "Corsa", ano: "2000", cor: "Prata"},
+   {nome: "Audi", modelo: "A3", ano: "2005", cor: "Amarelo"},
+]
+
+console.log(carros[1]); // { nome: 'chevrolet', modelo: 'Corsa', ano: '2000', cor: 'Prata' }
+console.log(carros[0].cor); // Azul
+console.log(carros[2].nome); // Audi
+console.log(carros[1].ano); // 2000
+*/
+
+let carros = [
+   {nome: "VW", modelo: "Fusca", ano: "1964", cor: "Azul"},
+   {nome: "chevrolet", modelo: "Corsa", ano: "2000", cor: "Prata"},
+   {nome: "Audi", modelo: "A3", ano: "2005", cor: "Amarelo"},
+]
+
+for(let i = 0; i < carros.length; i++){
+console.log("Nome: ", carros[i].nome, " - modelo: ", carros[i].modelo, "- Ano: ", carros[i].ano, " - Cor: ", carros[i].cor );
+}
