@@ -1,13 +1,12 @@
 import "./card.css";
-import teclado from '../../assets/teclado.jpg'
 
 export default function Card({nome, descricao, preco, imagem}) {
   return (
     <article className="card">
       <img
         className="card__img"
-        src={imagem} // Usamos a prop imagem aqui
-        alt={nome} // Usamos a prop nome aqui
+        src={imagem} // Usamos a props (propriedades) imagem aqui
+        alt={nome} // Usamos a props (propriedades) nome aqui
         loading="lazy"
         />            
       

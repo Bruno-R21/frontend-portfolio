@@ -22,21 +22,18 @@ export default function App() {
             preco="299.90"
             imagem={imgTeclado}
           />
-
           <Card // Card Produto Mouse
             nome="Mouse Gamer"
             descricao="Mouse com iluminação ARGB - 12000 DPI."
             preco="199.90"
             imagem={imgMouse}
           />
-
           <Card // Card Produto Cadeira Gamer 
             nome="Cadeira Gamer"
             descricao="Design ergonômico, estofamento macio e regulagem de altura."
             preco="599.90"
             imagem={imgCadeira}
           />
-
           <Card // Card Produto Headset 
             nome="Headset"
             descricao="Som surround 7.1 e micorfone sem ruído."
