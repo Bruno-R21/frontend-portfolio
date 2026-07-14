@@ -1,7 +1,7 @@
 import "./card.css";
 import { useState } from "react";
 
-export default function Card({nome, descricao, preco, imagem}) {
+export default function Card({nome, descricao, preco, imagem, link}) {
  
   const [aberto, setAberto] = useState(false); // Estado que controla se a descrição está visível
   return (
@@ -24,12 +24,16 @@ export default function Card({nome, descricao, preco, imagem}) {
       <div className="card__footer">
         
         <span className="card__price">R${preco}</span>
-
+        
         <button 
         className="card__btn" onClick={() => setAberto(!aberto)}   //Trocou =>alert(`Ver mais:"${nome}`)} por setAberto( !aberto)}
         >
           {aberto ? "Ver menos" : "Ver mais"}         
         </button>
+        <a href={link}
+        target="_blank">
+          <button className="card_btn_link">Clique aqui</button>
+        </a>
       </div>
     </article>
   );
