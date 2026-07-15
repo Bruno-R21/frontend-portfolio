@@ -1,6 +1,6 @@
 import "./filme.css";
 import { useState } from "react";
-import Selo from "./Selo.jsx";
+import Selo from "./Selo.jsx"
 
 export default function Filme({titulo, sinopse, nota, poster, lancamento}) {
 
@@ -10,12 +10,12 @@ export default function Filme({titulo, sinopse, nota, poster, lancamento}) {
   return (
     <article className="filme-card">      
       <div className="filme-poster-wrap">
-        <img className="filme-poster" 
+        <img className="filme-poster"         
         src={poster} 
         alt={titulo} 
         loading="lazy"
         />
-        <span className="filme-selo">{lancamento}</span> 
+       <Selo lancamento={lancamento} /> 
       </div>
 
       <div className="filme-body">
@@ -31,9 +31,9 @@ export default function Filme({titulo, sinopse, nota, poster, lancamento}) {
 
         {visivel &&<p className="filme-sinopse">{sinopse}</p>}
 
-        <button className="filme-btn" onClick={() => setVisivel(!visivel)}
+        <button className="filme-btn" onClick={alternarSinopse}                        
           >
-          {visivel ? "Ocultar sinopse" : "Ver sinopse"}
+          {visivel ? "Ocultar sinopse" : "Ver sinopse"}                                       
         </button>
       </div>
     </article>
