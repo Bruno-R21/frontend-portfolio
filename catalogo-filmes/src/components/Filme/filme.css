@@ -1,0 +1,89 @@
+.filme-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
+
+.filme-poster-wrap {
+  position: relative;
+}
+
+.filme-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  background: #0d0507;
+}
+
+.filme-selo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(180deg, var(--brand), var(--brand-700));
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: .3px;
+}
+
+.filme-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filme-titulo {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.filme-nota {
+  color: #f5c518;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.filme-horarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filme-horarios .horario {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 12.5px;
+  padding: 4px 9px;
+  border-radius: 8px;
+}
+
+.filme-sinopse {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.filme-btn {
+  margin-top: 4px;
+  align-self: flex-start;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--brand-700);
+  background: linear-gradient(180deg, var(--brand), var(--brand-700));
+  color: #fff;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: transform .06s ease, filter .15s ease;
+}
+.filme-btn:hover { filter: brightness(1.05); }
+.filme-btn:active { transform: translateY(1px); }
