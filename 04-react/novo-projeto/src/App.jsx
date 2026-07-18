@@ -4,19 +4,30 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
-
+import Ajuda from "./pages/Ajuda";
+import Produtos from "./pages/Produtos";
+import ProdutoDetalhe from "./pages/ProdutoDetalhe";
+import NotFound from "./pages/NotFound";
 export default function App() {
   return (
     <BrowserRouter>
+      {" "}
       <nav>
-        <Link to="/">Início</Link> <Link to="/sobre">Sobre</Link>
-        <Link to="/contato">Contato</Link>
-      </nav>
-      <Routes>        
-        <Route path="/" element={<Home />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path="/contato" element={<Contato />} />
-      </Routes>
+        {" "}
+        <Link to="/">Início</Link> <Link to="/sobre">Sobre</Link>{" "}
+        <Link to="/contato">Contato</Link> <Link to="/ajuda">Ajuda</Link>{" "}
+        <Link to="/produtos">Produtos</Link>{" "}
+      </nav>{" "}
+      <Routes>
+        {" "}
+        <Route path="/" element={<Home />} />{" "}
+        <Route path="/sobre" element={<Sobre />} />{" "}
+        <Route path="/contato" element={<Contato />} />{" "}
+        <Route path="/ajuda" element={<Ajuda />} />{" "}
+        <Route path="/produtos" element={<Produtos />} />{" "}
+        <Route path="/produtos/:id" element={<ProdutoDetalhe />} />{" "}
+        <Route path="*" element={<NotFound />} />{" "}
+      </Routes>{" "}
     </BrowserRouter>
   );
 }
