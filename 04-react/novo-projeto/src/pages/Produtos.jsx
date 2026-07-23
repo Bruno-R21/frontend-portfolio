@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Styles from "./Produtos.module.css";
+import styles from "./Produtos.module.css";
 
 const produtos = [
   { id: "1", nome: "Teclado Mecãnico", descricao: "Switches lineares e RGB per-key."},
@@ -14,12 +14,13 @@ export default function Produtos() {
       <h1>Produtos</h1>
       <ul>
         {produtos.map((produto) => (
-        <li Key={produto.id} className={Styles.item}>
+        <li Key={produto.id} className={styles.item}>
           <Link to={`/produtos/${produto.id}`}>{produto.nome}</Link>
         </li>
         ))}
       </ul>
     </div>
+    
   );
 }
 
