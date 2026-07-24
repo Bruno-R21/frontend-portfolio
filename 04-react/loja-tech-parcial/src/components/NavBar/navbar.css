@@ -2,7 +2,7 @@
   background: var(--surface);
   width: 100%;
   height: 100px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0,0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0, 0.5);
   border-bottom: 1px solid var(--border);
   position: -webkit-sticky;
   top: 0;
@@ -14,7 +14,7 @@
   max-width: 1800px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 40PX;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@
 
 .navbar__brand {
   font-weight: 900;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
 }
 
 .navbar__links {
@@ -38,15 +38,15 @@
   text-decoration: none;
   padding: 4px 30px;
   border-radius: 10px;
-  transition: background-color .5s ease ;
+  transition: background-color 0.5s ease;
 }
 
 .navbar__links a:hover {
   background: #dddcdc;
 }
 
-.logo {     
+.logo {
   display: block;
-  height: 110px;  
+  height: 110px;
   width: auto;
 }
