@@ -1,6 +1,7 @@
 // App.jsx
 import "./App.css";
 import Header from "./components/Header";
+import Countdown from "./components/Countdown";
 
 function App() {
   return (
@@ -44,34 +45,8 @@ function App() {
       {/* ==============================
           CONTADOR
       ============================== */}
-
-      <section className="contador-secao">
-        <h2>♥ &nbsp; FALTAM PARA A FESTA &nbsp; ♥</h2>
-
-        <div className="contador">
-
-          <div className="contador-item">
-            <strong>12</strong>
-            <span>DIAS</span>
-          </div>
-
-          <div className="contador-item">
-            <strong>08</strong>
-            <span>HORAS</span>
-          </div>
-
-          <div className="contador-item">
-            <strong>42</strong>
-            <span>MINUTOS</span>
-          </div>
-
-          <div className="contador-item">
-            <strong>15</strong>
-            <span>SEGUNDOS</span>
-          </div>
-
-        </div>
-      </section>
+      
+      <Countdown />           
 
      {/* ==============================
           PRESENTES
