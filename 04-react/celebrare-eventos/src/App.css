@@ -1,17 +1,164 @@
+/* ===============================================
+  CONFIGURAÇÃO GERAL DO CONVITE
+  ================================================ */
+
 .convite {
   min-height: 100vh;
 }
 
-.capa {
-  min-height: 100vh;
-  padding: 60px 24px;
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+
+.header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 32px;
 
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo {
+  display: flex;
   flex-direction: column;
+
+  line-height: 1;
+}
+
+.logo span {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  color: #c94d6a;
+}
+
+.logo small {
+  font-size: 0.7rem;
+  color: #b78345;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================
+   MENU
+   ========================================= */
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.menu a {
+  color: #241c1e;
+  text-decoration: none;
+
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #c94d6a;
+}
+
+/* =========================================
+   BOTÃO DE MÚSICA
+   ========================================= */
+
+.music-button {
+  border: none;
+  border-radius: 25px;
+
+  padding: 11px 20px;
+
+  background-color: #d84f6d;
+  color: white;
+
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}   
+
+.music-button:hover {
+  background-color: #c43f5d;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   CAPA
+   ========================================= */
+
+.capa {
+  min-height: calc(100vh - 80px);
+  padding: 60px 24px;
+
+  display: flex;  
   align-items: center;
   justify-content: center;
+  
+}
 
-  text-align: center;
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  width: 100%;
+  max-width: 1100px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 70px;
+}  
+
+.hero-foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-principal {
+  display: block;
+
+  width: 100%;
+  height: 100%;  
+
+  object-fit: cover;  
+
+  border-radius: 220px 220px 20px 20px;
+ 
+}
+
+.moldura-foto {
+  width: min(100%, 420px);
+  aspect-ratio: 3 / 4;
+
+  padding: 10px;
+
+  border: 2px solid #b78345;
+
+  border-radius: 210px 210px 25px 25px;
+}
+
+.hero-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .idade {
@@ -42,7 +189,7 @@
 
 .capa h1 {
   margin: 0;
-
+  
   font-size: clamp(2.5rem, 10vw, 4rem);
   letter-spacing: 0.25em;
   font-weight: 400;
@@ -54,5 +201,3 @@
   font-size: 0.85rem;
   letter-spacing: 0.25em;
 }
-
-
