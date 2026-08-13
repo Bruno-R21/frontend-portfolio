@@ -2,6 +2,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Countdown from "./components/Countdown";
+import Presentes from "./components/Presentes";
 
 function App() {
   return (
@@ -52,7 +53,9 @@ function App() {
           PRESENTES
       ============================== */}  
 
-      <section id="presentes" className="secao presentes">
+      <Presentes />
+
+      {/* <section id="presentes" className="secao presentes">
 
         <div className="titulo-secao">
           <span>────</span>
@@ -148,7 +151,7 @@ function App() {
         </button>
 
       </section>
-
+    */}
 
       {/* ==============================
           MENSAGEM
