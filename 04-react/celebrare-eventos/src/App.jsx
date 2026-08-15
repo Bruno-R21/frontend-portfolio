@@ -1,13 +1,17 @@
 // App.jsx
+
 import "./App.css";
+
 import Header from "./components/Header";
 import Countdown from "./components/Countdown";
 import Presentes from "./components/Presentes";
+import Galeria from "./components/Galeria";
 
-function App() {
+function App() {   
+
   return (
     <main className="convite">
-      <Header />
+      <Header />      
 
       {/* ==============================
           CAPA / HERO
@@ -39,209 +43,70 @@ function App() {
 
             <p className="celebre">CELEBRE A VIDA!</p>
           </div>
-
         </div>
       </section>
 
       {/* ==============================
           CONTADOR
       ============================== */}
-      
-      <Countdown />           
 
-     {/* ==============================
+      <audio id="musica-festa" src="/musicas/rachel.mp3" loop />
+
+      {/* ==============================
+          CONTADOR
+      ============================== */}
+
+      <Countdown />
+
+      {/* ==============================
           PRESENTES
-      ============================== */}  
+      ============================== */}
 
       <Presentes />
-
-      {/* <section id="presentes" className="secao presentes">
-
-        <div className="titulo-secao">
-          <span>────</span>
-          <h2>🎁 LISTA DE PRESENTES 🎁</h2>
-          <span>────</span>
-        </div>
-
-        <div className="presentes-grid">
-
-          <article className="presente-card">
-
-            <img 
-              src="/imagens/airfryer.jpg"
-              alt="Air Fryer"
-            />
-
-            <h3>Air Fryer</h3>
-
-            <p>R$ 299,90</p>
-
-            <span className="loja">Mercado Livre</span>
-
-            <a href="#" className="comprar">
-              🛒 Comprar
-            </a>
-
-          </article>
-
-
-          <article className="presente-card">
-
-            <img
-              src="/imagens/cafeteira.jpg"
-              alt="Cafeteira Nespresso"
-            />
-
-            <h3>Cafeteira Nespresso</h3>
-
-            <p>R$ 489,90</p>
-
-            <span className="loja">Shopee</span>
-
-            <a href="#" className="comprar">
-              🛒 Comprar
-            </a>
-
-          </article>
-
-
-          <article className="presente-card">
-
-            <img
-              src="/imagens/jogo-tacas.jpg"
-              alt="Jogo de Taças"
-            />
-
-            <h3>Jogo de Taças</h3>
-
-            <p>R$ 159,90</p>
-
-            <span className="loja">Mercado Livre</span>
-
-            <a href="#" className="comprar">
-              🛒 Comprar
-            </a>
-
-          </article>
-
-
-          <article className="presente-card">
-
-            <img
-              src="/imagens/jogo-cama.jpg"
-              alt="Jogo de Cama King"
-            />
-
-            <h3>Jogo de Cama King</h3>
-
-            <p>R$ 259,90</p>
-
-            <span className="loja">Americanas</span>
-
-            <a href="#" className="comprar">
-              🛒 Comprar
-            </a>
-
-          </article>
-
-        </div>
-
-        <button className="ver-presentes">
-          Ver todos os presentes 🎁
-        </button>
-
-      </section>
-    */}
 
       {/* ==============================
           MENSAGEM
       ============================== */}
 
       <section id="mensagem" className="mensagem-secao">
-
         <div className="mensagem-foto">
-
-          <img
-            src="/imagens/foto-mensagem.jpg"
-            alt="Rachel"
-          />
-
+          <img src="/imagens/foto-mensagem.jpg" alt="Rachel" />
         </div>
 
         <div className="mensagem-conteudo">
-
           <h2>♥ &nbsp; MENSAGEM DA ANIVERSARIANTE</h2>
 
           <p>
-            Cada pessoa que faz parte da minha vida tem um
-            lugar especial no meu coração.
+            Cada pessoa que faz parte da minha vida tem um lugar especial no meu
+            coração.
           </p>
 
-          <p>
-            Obrigada por caminharem comigo até aqui. 💕
-          </p>
+          <p>Obrigada por caminharem comigo até aqui. 💕</p>
 
-          <p>
-            Conto com sua presença para celebrar esse
-            momento tão especial!
-          </p>
-
+          <p>Conto com sua presença para celebrar esse momento tão especial!</p>
         </div>
-
       </section>
-
 
       {/* ==============================
           GALERIA
       ============================== */}
 
-      <section id="galeria" className="secao galeria">
-
-        <div className="titulo-secao">
-
-          <span>────</span>
-
-          <h2>GALERIA DE MOMENTOS ♥</h2>
-
-          <span>────</span>
-
-        </div>
-
-        <div className="galeria-grid">
-
-          <img src="/imagens/galeria-1.jpg" alt="Momento da Rachel" />
-          <img src="/imagens/galeria-2.jpg" alt="Momento da Rachel" />
-          <img src="/imagens/galeria-3.jpg" alt="Momento da Rachel" />
-          <img src="/imagens/galeria-4.jpg" alt="Momento da Rachel" />
-          <img src="/imagens/galeria-5.jpg" alt="Momento da Rachel" />
-
-        </div>
-
-        <button className="ver-fotos">
-          Ver mais fotos 📷
-        </button>
-
-      </section>
-
+      <Galeria />
 
       {/* ==============================
           INFORMAÇÕES DA FESTA
       ============================== */}
 
       <section id="local" className="informacoes">
-
         <div className="titulo-secao">
-
           <span>────</span>
 
           <h2>INFORMAÇÕES DA FESTA ♥</h2>
 
           <span>────</span>
-
         </div>
 
         <div className="informacoes-grid">
-
           <div>
             <span>📅</span>
             <h3>DATA</h3>
@@ -255,42 +120,53 @@ function App() {
             <p>13:00</p>
           </div>
 
-          <div>
+          <div className="info-card">
             <span>📍</span>
+
             <h3>LOCAL</h3>
+
             <p>
-              Rua Sapoti, L18 Q57
+              Rua Sapoti, Lote 18 - Quadra 57
               <br />
-              Curicica
+              Curicica - Rio de Janeiro
             </p>
+
+            <a
+              href="https://maps.google.com/?q=Rua+Sapoti+Curicica+RJ"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-mapa"
+            >
+              🗺️ Abrir Mapa
+            </a>
           </div>
 
           <div>
             <span>👥</span>
             <h3>CONFIRME SUA PRESENÇA</h3>
-            <button>WhatsApp</button>
+            <a
+              href="https://wa.me/5521972206008?text=Olá!%20Confirmo%20minha%20presença%20na%20festa%20da%20Rachel."
+              target="_blank"
+              rel="noreferrer"
+              className="btn-whatsapp"
+            >
+              Confirmar Presença
+            </a>
           </div>
-
         </div>
-
       </section>
-
 
       {/* ==============================
           RODAPÉ
       ============================== */}
 
       <footer>
-
         <p>Obrigado por fazer parte dessa história!</p>
 
         <p>Rachel 40 anos — Celebra a vida!</p>
-
-      </footer>    
-
-  </main>  
+      </footer>
+    </main>
   );
 }
 
 export default App;
-

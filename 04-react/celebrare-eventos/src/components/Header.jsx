@@ -1,5 +1,7 @@
 // Header.jsx
 
+import MusicPlayer from "./MusicPlayer";
+
 function Header() {
     return (
         <header className="header">
@@ -16,9 +18,8 @@ function Header() {
                 <a href="#mensagem">Mensagem</a>
             </nav>
 
-            <button className="music-button">
-               ♫ Tocar música 
-            </button>
+            <MusicPlayer />
+            
         </header>
     )
 }

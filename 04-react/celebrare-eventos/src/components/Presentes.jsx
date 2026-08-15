@@ -6,6 +6,98 @@ import PresenteModal from "./PresenteModal";
 
 function Presentes() {
   const [presenteSelecionado, setPresenteSelecionado] = useState(null);
+
+  return (
+    <section id="presentes" className="secao presentes">
+
+      <div className="titulo-secao">
+        <span>────</span>
+
+        <h2>🎁 LISTA DE PRESENTES 🎁</h2>
+
+        <span>────</span>
+      </div>
+
+      {/* =========================================
+          MENSAGEM DA LISTA
+      ========================================= */}
+
+      <div className="mensagem-presentes">
+
+        <strong>
+          Sua presença já é o nosso maior presente!
+        </strong>
+
+        <p>
+          Caso queira nos presentear, selecionamos
+          algumas sugestões com carinho.
+        </p>
+        
+
+      </div>
+
+      {/* =========================================
+          CARDS DOS PRESENTES
+      ========================================= */}
+
+      <div className="presentes-grid">
+
+        {presentes.map((presente) => (
+
+          <article
+            className="presente-card"
+            key={presente.id}
+          >
+
+            <img
+              src={presente.imagem}
+              alt={presente.categoria}
+            />
+
+            <h3>
+              {presente.categoria}
+            </h3>
+            
+
+            <button
+              className="detalhes-presente"
+              onClick={() =>
+                setPresenteSelecionado(presente)
+              }
+            >
+              🎁 Ver opções
+            </button>
+
+          </article>
+
+        ))}
+
+      </div>
+
+      {/* =========================================
+          MODAL
+      ========================================= */}
+
+      <PresenteModal
+        presente={presenteSelecionado}
+        fecharModal={() =>
+          setPresenteSelecionado(null)
+        }
+      />
+
+    </section>
+  );
+}
+
+export default Presentes;
+
+
+/* import { useState } from "react";
+import presentes from "../data/presentes";
+import PresenteModal from "./PresenteModal";
+
+function Presentes() {
+  const [presenteSelecionado, setPresenteSelecionado] = useState(null);
   return (
     <section id="presentes" className="secao presentes">
       <div className="titulo-secao">
@@ -67,8 +159,8 @@ function Presentes() {
                   >
                     🛒 Comprar
                   </a>
-                 */}
-          </article>
+                 */
+          /*</article>
         ))}
       </div>
 
@@ -84,3 +176,4 @@ function Presentes() {
 }
 
 export default Presentes;
+*/
