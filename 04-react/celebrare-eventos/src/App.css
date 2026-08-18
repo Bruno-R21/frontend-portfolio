@@ -1,3 +1,28 @@
+body {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(250, 215, 220, 0.55),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(250, 221, 225, 0.6),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(249, 225, 228, 0.5),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(248, 216, 222, 0.55),
+      transparent 30%
+    ),
+    #fff9f7;
+}
+
 /* ===============================================
   CONFIGURAÇÃO GERAL DO CONVITE
   ================================================ */
@@ -35,15 +60,16 @@
 }
 
 .logo span {
-  font-family: Georgia, serif;
-  font-size: 1.8rem;
+  font-family:"Gabriola", serif;
+  font-size: 2.8rem;
   color: #c94d6a;
 }
 
 .logo small {
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   color: #b78345;
   letter-spacing: 0.08em;
+  font-family:"Great Vibes", serif;
 }
 
 /* =========================================
@@ -53,16 +79,15 @@
 .menu {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 38px;
 }
 
 .menu a {
   color: #241c1e;
   text-decoration: none;
-
   font-family: Georgia, serif;
-  font-size: 0.95rem;
-
+  font-size: 1.32rem ;
+  font-weight: lighter;
   transition: color 0.3s ease;
 }
 
@@ -70,273 +95,516 @@
   color: #c94d6a;
 }
 
+
 /* =========================================
-   CAPA
+   CAPA / HERO
    ========================================= */
 
 .capa {
-  min-height: calc(100vh - 80px);
-  padding: 60px 24px;
-
-  display: flex;  
+  position: relative;
+  width: 100%;
+  min-height: 720px;
+  padding: 45px 5% 70px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 20% 40%,
+      rgba(247, 207, 213, 0.28),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(239, 194, 204, 0.22),
+      transparent 35%
+    ),
+    #fffaf9;
 }
 
 /* =========================================
-   HERO
+   ESTRUTURA PRINCIPAL
    ========================================= */
 
 .hero {
+  position: relative;
+  z-index: 2;
   width: 100%;
-  max-width: 1100px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  align-items: center;
-
-  gap: 70px;
-}  
-
-.hero-foto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.foto-principal {
-  display: block;
-
-  width: 100%;
-  height: 100%;  
-
-  object-fit: cover;  
-
-  border-radius: 220px 220px 15px 15px;
- 
-}
-
-.moldura-foto {
-  width: min(100%, 420px);
-  aspect-ratio: 3 / 4;
-
-  padding: 6px;
-
-  border: 2px solid #b78345;
-
-  border-radius: 210px 210px 25px 25px;
-
-  background: linear-gradient(135deg, #fff9f4, #f4e4d5, #fff9f4);
-
-  box-shadow: 0 0 0 4px #f8eee7, 0 0 0 6px #c99a5b;
-}
-
-.hero-conteudo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.idade {
-  margin: 0;
-
-  font-size: clamp(3rem, 12vw, 5rem);
-  font-weight: 300;
-  letter-spacing: 0.12em;
-}
-
-.frase-principal {
-  max-width: 500px;
-  margin: 20px 0 0;
-
-  font-size: 0.85rem;
-  line-height: 1.8;
-  letter-spacing: 0.18em;
-}
-
-.proximos-capitulos {
-  max-width: 450px;
-  margin: 12px 0 45px;
-
-  font-size: 0.75rem;
-  line-height: 1.7;
-  letter-spacing: 0.15em;
-}
-
-.capa h1 {
-  margin: 0;
-  
-  font-size: clamp(2.5rem, 10vw, 4rem);
-  letter-spacing: 0.25em;
-  font-weight: 400;
-}
-
-.celebre {
-  margin-top: 15px;
-
-  font-size: 0.85rem;
-  letter-spacing: 0.25em;
-}
-
-/* =========================================
-   ESTRUTURA DA HERO
-   ========================================= */
-
-.hero {
-  width: min(1200px, 100%);
-
+  max-width: 1250px;
+  min-height: 620px;
   margin: 0 auto;
-
-  padding: 40px 30px;
-
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
+  grid-template-columns:
+    minmax(380px, 0.9fr)
+    minmax(450px, 1.1fr);
   align-items: center;
-
   gap: 60px;
 }
 
+/* =========================================
+   FOTO
+   ========================================= */
+
 .hero-foto {
+  position: relative;
+  z-index: 2;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+/* Moldura externa */
+.moldura-foto {
+  position: relative;
+  width: min(430px, 100%);
+  aspect-ratio: 0.78;
+  padding: 9px;
+  border: 2px solid #c8a15a;
+  border-radius: 220px 220px 28px 28px;
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf6,
+      #f4e5d4
+    );
+  box-shadow:
+    0 8px 25px rgba(110, 70, 70, 0.12);
+}
+
+/* Segunda moldura */
+.moldura-foto::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid #d8b978;
+  border-radius: 215px 215px 23px 23px;
+  pointer-events: none;
+}
+
+/* Foto */
+.moldura-foto img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 210px 210px 20px 20px;
+}
+
+/* =========================================
+   CONTEÚDO DA CAPA
+   ========================================= */
 .hero-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
   text-align: center;
 }
 
+/* =========================================
+   40 ANOS
+   ========================================= */
 .idade {
   margin: 0;
-
+  font-family: "Georgia", serif;
   font-size: clamp(6rem, 12vw, 9rem);
-
+  font-weight: 500;
   line-height: 0.8;
-
   color: #d34d6b;
+  letter-spacing: -0.03em;
+}
 
-  font-weight: 300;
+.numero {
+  display: block;
+  margin-top: 38px; 
+  color: #c94768;
+  font-family: "Cinzel", serif;
+  font-size: clamp(7.5rem, 30vw, 15rem);
+  font-weight: 480;
+  line-height: 0.72;
+  letter-spacing: -0.08em;
+  position: relative;
+  z-index: 2;
 }
 
 .anos {
-  margin: -10px 0 20px;
-
-  font-family: Georgia, serif;
-
-  font-size: 3rem;
-
+  position: relative;
+  display: inline-block;
+  margin-top: -18px; 
   color: #b78345;
-}
-
-.hero-conteudo h1 {
-  margin: 25px 0 5px;
-
-  color: #d34d6b;
-
-  font-family: Georgia, serif;
-
-  font-size: clamp(3rem, 7vw, 5rem);
-
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3.8rem, 28vw, 7.5rem);
   font-weight: 400;
-
-  letter-spacing: 0.08em;
+  line-height: 0.5;
+  white-space: nowrap;
+  z-index: 3;
 }
 
+.anos::after {
+  content: "♥";
+  position: absolute;
+  top: -0px;
+  right: -25px;
+  color: #c94768;
+  font-family: Georgia, serif;
+  font-size: 1.1rem; 
+  transform: rotate(8deg);
+}
+
+/* =========================================
+   FRASES
+   ========================================= */
+.frase-principal {
+  width: 100%;
+  max-width: 620px;
+  margin: 22px 0 8px;
+  color: #b94d68;
+  font-family: Georgia, serif;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.proximos-capitulos {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  color: #4f4445;
+  font-family: Georgia, serif;
+  font-size: clamp(0.72rem, 2vw, 0.98rem);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* =========================================
+   RACHEL
+   ========================================= */
+.hero-conteudo h1 {
+  position: relative;
+  display: inline-block;
+  margin: 28px 0 5px;
+  color: #c94768;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(4.8rem, 6.7vw, 5.7rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  z-index: 2;
+}
+
+/* =========================================
+   CELEBRE A VIDA
+   ========================================= */
+.celebre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.celebre span {
+  width: 55px;
+  height: 1px;
+  background: #b78345;
+}
+
+.celebre p {
+  position: relative;
+  margin: 5px 0 0;
+  color: #b78345;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-align: center;
+}
+
+/* Coração acima de "CELEBRE A VIDA!" */
+.celebre p::before {
+  content: "♥";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c94768;
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   FLORES DECORATIVAS
+   ========================================= */
+
+.floral {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
+  object-fit: contain;
+}
+
+
+/* =========================================
+   FLORES — CAPA
+   ========================================= */
+.floral-superior-esquerdo {
+  top: -10px;
+  left: -10px;
+  width: 300px;
+  transform: rotate(-3deg);
+}
+
+.floral-superior-direito {
+  top: -10px;
+  right: -10px;
+  width: 300px;
+  transform: rotate(3deg);
+}
+
+.floral-inferior-esquerdo {
+  bottom: -10px;
+  left: -10px;
+  width: 300px;
+  transform: rotate(3deg);
+}
+
+.floral-inferior-direito {
+  right: -10px;
+  bottom: -10px;
+  width: 300px;
+  transform: rotate(-3deg);
+}
+
+/* =========================================
+   FLOR — FOTO PRINCIPAL
+   ========================================= */
+.hero-foto {
+  position: relative;
+  overflow: visible;
+}
+
+.moldura-foto {
+  position: relative;
+  z-index: 1;
+}
+
+.floral-foto-principal {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  right: 260px;
+  bottom: -35px;
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* =========================================
+   FLOR DECORATIVA — PÁGINA INTEIRA
+   ========================================= */
+.convite {
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   SEÇÕES DECORADAS
+   ========================================= */
+.secao-decorada {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   FLORES LATERAIS — OUTRAS SEÇÕES
+   ========================================= */
+
+
+.floral-lateral-esquerda {  
+  left: -45px;
+  top: 15%;
+  width: 300px;
+  transform: rotate(-12deg);
+}
+
+.floral-lateral-direita {
+  right: -45px;
+  bottom: 10%;
+  width: 300px;
+  transform: rotate(12deg);
+}
+
+.mensagem-foto {
+  position: relative;
+  overflow: visible;
+}
+
+.floral-foto-mensagem {
+  position: absolute;
+  width: 30px;
+  left: -35px;
+  bottom: -20px;
+  z-index: 5;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* =========================================
+   CONTADOR — ÁREA PRINCIPAL
+   ========================================= */
+.contador-secao {
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   CONTADOR — CAIXAS
+   ========================================= */
+.contador-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   FLOR — DENTRO DAS CAIXAS DO CONTADOR
+   ========================================= */
+
+.contador-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.floral-contador {
+  position: absolute;
+  left: 1px;
+  bottom: 1px;
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  z-index: 1;
+  opacity: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.contador-item strong,
+.contador-item span {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   CONTEÚDO DO CONTADOR
+   ========================================= */
+
+.contador-item strong,
+.contador-item span {
+  position: relative;
+  z-index: 2;
+}
 
 /* =========================================
    CONTADOR
    ========================================= */
-
 .contador-secao {
   width: min(1000px, 90%);
-
-  margin: 20px auto 50px;
-
+  margin: 30px auto 50px;
   padding: 20px;
-
   border: 1px solid #dfb6b9;
-
   border-radius: 25px;
-
   text-align: center;
 }
 
 .contador-secao h2 {
   margin-top: 0;
-
   color: #bd4965;
-
   font-family: Georgia, serif;
-
   font-size: 1.2rem;
-
   letter-spacing: 0.08em;
+}
+
+.contador h2::before {
+  content: "♥";
+  margin-right: 12px;
+  color: #c94768;
+}
+
+.contador h2::after {
+  content: "♥";
+  margin-left: 12px;
+  color: #c94768;
 }
 
 .contador {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 20px;
+  position: relative;
+  width: min(900px, 92%);
+  margin: 15px auto;
+  padding: 28px 15px 30px;
+  border: 2px solid #d9a8ae;
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 248, 246, 0.9),
+      rgba(252, 229, 233, 0.65)
+    );
+  box-shadow:
+    0 10px 30px rgba(181, 110, 125, 0.08);
+  text-align: center;
+  overflow: hidden;
 }
 
 .contador-item {
   padding: 15px;
-
   border: 1px solid #efd7d5;
-
   border-radius: 12px;
-
   background: rgba(255, 255, 255, 0.4);
 }
 
 .contador-item strong {
   display: block;
-
   color: #c94d6a;
-
   font-family: Georgia, serif;
-
   font-size: 3rem;
-
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .contador-item span {
   font-size: 0.8rem;
-
   letter-spacing: 0.1em;
 }
-
 
 /* =========================================
    SEÇÕES
    ========================================= */
-
 .secao {
   width: 100%;
   max-width: 1400px;
-
   margin: 0 auto;
-
   padding: 45px 30px;
 }
 
 .titulo-secao {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 15px;
-
   margin-bottom: 25px;
-
   color: #bd4965;
 }
 
@@ -497,43 +765,26 @@
 
 .ver-presentes {
   display: block;
-
   margin: 20px auto 0;
-
   padding: 9px 25px;
-
   border: 1px solid #d46b80;
-
   border-radius: 20px;
-
   background: transparent;
-
   color: #bd4965;
-
   cursor: pointer;
 }
 
 .detalhes-presente {
   width: auto;
-
   align-self: center;
-
   margin-top: auto;
-
   padding: 7px 18px;
-
   border: 1px solid #B78345;
-
   border-radius: 18px;
-
   background: transparent;
-
   color: #956A38;
-
   font-size: 0.75rem;
-
   cursor: pointer;
-
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
@@ -542,9 +793,7 @@
 
 .detalhes-presente:hover {
   background: #B78345;
-
   color: white;
-
   transform: translateY(-2px);
 }
 
@@ -552,65 +801,88 @@
 /* =========================================
    MENSAGEM
    ========================================= */
-
 .mensagem-secao {
   width: min(1000px, 90%);
-
-  margin: 30px auto;
-
-  padding: 20px;
-
+  margin: 50px auto;
+  padding: 50px;
   display: flex;
-
   align-items: center;
-
-  gap: 30px;
-
+  gap: 40px;
   border: 1px solid #ead0d1;
-
   border-radius: 20px;
-
   background: rgba(255, 245, 242, 0.7);
 }
 
-.mensagem-foto img {
-  width: 150px;
+/* =========================================
+   MENSAGEM — FOTO
+   ========================================= */
 
-  height: 150px;
+.mensagem-foto {
+  position: relative;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+/* SOMENTE A FOTO PRINCIPAL */
+
+.foto-mensagem-principal {
+  width: 180px;
+  height: 180px;
 
   object-fit: cover;
 
   border-radius: 50%;
-
   border: 2px solid #c99a5b;
+
+  display: block;
 }
 
+
+/* =========================================
+   MENSAGEM — FLOR DA FOTO
+   ========================================= */
+
+.floral-foto-mensagem {
+  position: absolute;
+
+  width: 217px;
+  height: auto;
+
+  left: -16px;
+  bottom: -7px;
+
+  z-index: 5;
+
+  object-fit: contain;
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+
+  pointer-events: none;
+  user-select: none;
+}
 .mensagem-conteudo {
   text-align: center;
-
   flex: 1;
 }
 
 .mensagem-conteudo h2 {
   color: #bd4965;
-
   font-family: Georgia, serif;
-
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 .mensagem-conteudo p {
   font-family: Georgia, serif;
-
   font-style: italic;
-
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* =========================================
    GALERIA
    ========================================= */
-
 .galeria {
   width: 100%;
 }
@@ -618,16 +890,12 @@
 /* =========================================
    CARROSSEL
    ========================================= */
-
 .galeria-carrossel {
   width: 100%;
   max-width: 1100px;
-
   margin: 40px auto 0;
-
   display: flex;
   align-items: center;
-
   gap: 14px;
 }
 
@@ -635,7 +903,6 @@
 /* =========================================
    ÁREA DAS FOTOS
    ========================================= */
-
 .galeria-grid {
   flex: 1;
 
@@ -742,59 +1009,67 @@
 }
 
 /* =========================================
-   INFORMAÇÕES
+   INFORMAÇÕES DA FESTA
    ========================================= */
 
 .informacoes {
   width: min(1100px, 92%);
 
-  margin: 30px auto;
+  margin: 50px auto;
 
-  padding: 30px 0;
+  padding: 70px 24px;
 }
 
-.informacoes-grid {
-  display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+/* =========================================
+   TÍTULO DA SEÇÃO
+   ========================================= */
 
-  text-align: center;
+.informacoes .titulo-secao {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 45px;
 }
 
-.informacoes-grid > div {
-  padding: 15px;
+.informacoes .titulo-secao h2 {
+  margin: 0;
 
-  border-right: 1px solid #e5caca;
-}
-
-.informacoes-grid > div:last-child {
-  border-right: none;
-}
-
-.informacoes-grid span {
-  font-size: 2rem;
-}
-
-.informacoes-grid h3 {
   color: #bd4965;
 
   font-family: Georgia, serif;
 
-  font-size: 0.9rem;
+  font-size: 1.4rem;
+
+  font-weight: 400;
+
+  letter-spacing: 0.05em;
+
+  text-align: center;
 }
 
-.informacoes-grid p {
-  margin: 5px 0;
+.informacoes .titulo-secao span {
+  color: #d9a8ae;
+
+  font-size: 1rem;
 }
 
-.informacoes {
-  padding: 90px 24px;
-}
+
+/* =========================================
+   GRID DOS CARDS
+   ========================================= */
 
 .informacoes-grid {
+  width: 100%;
+
   max-width: 1100px;
 
-  margin: 50px auto 0;
+  margin: 0 auto;
 
   display: grid;
 
@@ -803,7 +1078,13 @@
   gap: 20px;
 }
 
-.info-card {
+
+/* =========================================
+   CARDS
+   ========================================= */
+
+.informacoes-grid > div {
+  min-height: 220px;
 
   padding: 30px 20px;
 
@@ -811,38 +1092,81 @@
 
   border-radius: 20px;
 
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
 
   text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
-.info-card span {
+
+/* =========================================
+   ÍCONES DOS CARDS
+   ========================================= */
+
+.informacoes-grid > div > span {
   font-size: 2rem;
+
+  margin-bottom: 8px;
 }
 
-.info-card h3 {
-  margin: 15px 0 10px;
+
+/* =========================================
+   TÍTULOS DOS CARDS
+   ========================================= */
+
+.informacoes-grid h3 {
+  margin: 10px 0;
 
   color: #bd4965;
 
   font-family: Georgia, serif;
 
+  font-size: 0.9rem;
+
   font-weight: 400;
+
+  letter-spacing: 0.08em;
 }
 
-.info-card p {
-  line-height: 1.7;
+
+/* =========================================
+   TEXTOS DOS CARDS
+   ========================================= */
+
+.informacoes-grid p {
+  margin: 5px 0;
+
+  line-height: 1.6;
+
+  font-size: 0.9rem;
 }
+
+.informacoes-grid small {
+  color: #777;
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================================
+   BOTÃO — ABRIR MAPA
+   ========================================= */
 
 .btn-mapa {
-
   display: inline-block;
 
   margin-top: 15px;
 
-  padding: 10px 22px;
+  padding: 10px 20px;
 
-  border-radius: 10px;
+  border-radius: 20px;
 
   background: #b57c7c;
 
@@ -850,62 +1174,160 @@
 
   text-decoration: none;
 
+  font-size: 0.72rem;
+
   font-weight: 500;
 
-  letter-spacing: 0.8px;
+  letter-spacing: 0.05em;
 
   text-transform: uppercase;
 
   box-shadow: 0 4px 10px rgba(181, 124, 124, 0.2);
-
-  font-size: 0.75rem;
 
   transition: all 0.3s ease;
 }
 
 .btn-mapa:hover {
-
   background: #c96f87;
 
   transform: translateY(-2px);
 }
 
+
+/* =========================================
+   CONFIRMAÇÃO DE PRESENÇA
+   ========================================= */
+
+.confirmacao-card {
+  text-align: center;
+}
+
+
+/* Ícone */
+
+.confirmacao-icone {
+  display: block;
+
+  font-size: 2rem;
+
+  margin-bottom: 5px;
+}
+
+
+/* Título */
+
+.confirmacao-card h3 {
+  margin: 10px 0;
+
+  color: #bd4965;
+
+  font-family: Georgia, serif;
+
+  font-size: 0.9rem;
+
+  font-weight: 400;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* Prazo */
+
+.confirmacao-prazo {
+  max-width: 190px;
+
+  margin: 5px auto 18px;
+
+  color: #555;
+
+  font-family: Georgia, serif;
+
+  font-size: 0.85rem;
+
+  line-height: 1.5;
+}
+
+.confirmacao-prazo strong {
+  color: #bd4965;
+}
+
+
+/* =========================================
+   BOTÃO — WHATSAPP
+   ========================================= */
+
 .btn-whatsapp {
+  display: inline-flex;
 
-  display: inline-block;
+  align-items: center;
 
-  margin-top: 15px;
+  justify-content: center;
 
-  padding: 10px 22px;
+  gap: 8px;
 
-  border-radius: 10px;
+  margin-top: 5px;
 
-  background: #b57c7c;
+  padding: 10px 18px;
+
+  border-radius: 20px;
+
+  background: #25d366;
 
   color: #ffffff;
 
   text-decoration: none;
 
-  font-weight: 500;
-
-  letter-spacing: 0.8px;
-
-  text-transform: uppercase;
-
-  box-shadow: 0 4px 10px rgba(181, 124, 124, 0.2);
-
   font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+
+  text-transform: none;
+
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 
   transition: all 0.3s ease;
 }
 
-.btn-whatsapp:hover {
 
-  background: #c96f87;
+/* Ícone do WhatsApp */
 
-  transform: translateY(-2px);
+.btn-whatsapp img {
+  width: 20px !important;
+
+  height: 20px !important;
+
+  object-fit: contain;
+
+  border: none !important;
+
+  border-radius: 0 !important;
+
+  margin: 0;
+
+  padding: 0;
 }
 
+
+/* Texto do botão */
+
+.btn-whatsapp span {
+  color: #ffffff;
+
+  font-size: 0.75rem;
+}
+
+
+/* Hover */
+
+.btn-whatsapp:hover {
+  background: #20bd5a;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.25);
+}
 
 /* =========================================
    RODAPÉ
@@ -1506,4 +1928,183 @@ footer {
 
 .music-play:hover {
   background: rgba(255, 255, 255, 0.3);
+
+  
+  /* =========================================
+   CAPA — TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .capa {
+    padding: 60px 30px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    max-width: 650px;
+  }
+
+  .hero-foto {
+    order: 1;
+  }
+
+  .hero-conteudo {
+    order: 2;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .idade {
+    align-items: center;
+  }
+
+  .anos {
+    margin-left: 0;
+  }
+
+  .celebre {
+    justify-content: center;
+  }
+
+  .floral-superior-esquerdo {
+    width: 190px;
+  }
+
+  .floral-superior-direito {
+    width: 220px;
+  }
+
+  .floral-inferior-esquerdo {
+    width: 180px;
+  }
+
+  .floral-inferior-direito {
+    width: 200px;
+  }
+
+  /* Flores das outras seções */
+
+  .floral-lateral-esquerda,
+  .floral-lateral-direita {
+    width: 110px;
+  }
+
+  .floral-contador {
+    width: 55px;
+    height: 55px;
+    left: 3px;
+    bottom: 3px;
+  }
+
+}
+
+
+/* =========================================
+   CAPA — CELULAR
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .capa {
+    min-height: auto;
+
+    padding: 35px 18px 60px;
+  }
+
+  .hero {
+    min-height: auto;
+
+    gap: 35px;
+  }
+
+  .moldura-foto {
+    width: min(330px, 90vw);
+  }
+
+  .numero {
+    font-size: 6.5rem;
+  }
+
+  .anos {
+    margin-left: 0;
+
+    font-size: 3.3rem;
+  }
+
+  .frase-principal {
+    max-width: 330px;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.1em;
+  }
+
+  .proximos-capitulos {
+    max-width: 330px;
+
+    font-size: 0.65rem;
+  }
+
+  .hero-conteudo h1 {
+    font-size: 4rem;
+
+    margin-top: 24px;
+  }
+
+  .celebre p {
+    font-size: 1rem;
+
+    letter-spacing: 0.1em;
+  }
+
+  .celebre span {
+    width: 35px;
+  }
+
+  .floral-superior-esquerdo {
+    width: 130px;
+  }
+
+  .floral-superior-direito {
+    width: 150px;
+  }
+
+  .floral-inferior-esquerdo {
+    width: 130px;
+  }
+
+  .floral-inferior-direito {
+    width: 140px;
+  }
+
+  /* Flores das outras seções */
+
+  .floral-lateral-esquerda,
+  .floral-lateral-direita {
+    width: 75px;
+    opacity: 0.65;
+  }
+
+  .floral-foto-principal {
+    width: 75px;
+
+    right: -20px;
+    bottom: -10px;
+  }
+
+  .floral-contador {
+    width: 45px;
+    height: 45px;
+
+    left: 2px;
+    bottom: 2px;
+
+    opacity: 0.55;
+  }  
 }
