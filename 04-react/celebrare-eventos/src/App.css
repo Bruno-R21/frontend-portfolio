@@ -25,7 +25,7 @@ body {
 
 /* ===============================================
   CONFIGURAÇÃO GERAL DO CONVITE
-  ================================================ */
+  ============================================== */
 
 .convite {
   min-height: 100vh;
@@ -34,7 +34,6 @@ body {
 /* =========================================
    CABEÇALHO
    ========================================= */
-
 .header {
   width: 100%;
   max-width: 1200px;
@@ -51,7 +50,6 @@ body {
 /* =========================================
    LOGO
    ========================================= */
-
 .logo {
   display: flex;
   flex-direction: column;
@@ -75,7 +73,6 @@ body {
 /* =========================================
    MENU
    ========================================= */
-
 .menu {
   display: flex;
   align-items: center;
@@ -99,7 +96,6 @@ body {
 /* =========================================
    CAPA / HERO
    ========================================= */
-
 .capa {
   position: relative;
   width: 100%;
@@ -126,7 +122,6 @@ body {
 /* =========================================
    ESTRUTURA PRINCIPAL
    ========================================= */
-
 .hero {
   position: relative;
   z-index: 2;
@@ -145,7 +140,6 @@ body {
 /* =========================================
    FOTO
    ========================================= */
-
 .hero-foto {
   position: relative;
   z-index: 2;
@@ -344,7 +338,6 @@ body {
 /* =========================================
    FLORES DECORATIVAS
    ========================================= */
-
 .floral {
   position: absolute;
   z-index: 3;
@@ -429,8 +422,6 @@ body {
 /* =========================================
    FLORES LATERAIS — OUTRAS SEÇÕES
    ========================================= */
-
-
 .floral-lateral-esquerda {  
   left: -45px;
   top: 15%;
@@ -443,11 +434,6 @@ body {
   bottom: 10%;
   width: 300px;
   transform: rotate(12deg);
-}
-
-.mensagem-foto {
-  position: relative;
-  overflow: visible;
 }
 
 .floral-foto-mensagem {
@@ -469,17 +455,8 @@ body {
 }
 
 /* =========================================
-   CONTADOR — CAIXAS
-   ========================================= */
-.contador-item {
-  position: relative;
-  overflow: hidden;
-}
-
-/* =========================================
    FLOR — DENTRO DAS CAIXAS DO CONTADOR
    ========================================= */
-
 .contador-item {
   position: relative;
   overflow: hidden;
@@ -508,7 +485,6 @@ body {
 /* =========================================
    CONTEÚDO DO CONTADOR
    ========================================= */
-
 .contador-item strong,
 .contador-item span {
   position: relative;
@@ -610,13 +586,9 @@ body {
 
 .titulo-secao h2 {
   margin: 0;
-
   font-family: Georgia, serif;
-
   font-size: 1.2rem;
-
   font-weight: 400;
-
   letter-spacing: 0.08em;
 }
 
@@ -628,97 +600,69 @@ body {
 /* =========================================
    PRESENTES
    ========================================= */
-
 .presentes-grid {
   width: 100%;
   max-width: 1400px;
-
   margin: 30px auto 0;
-
   display: grid;
-
   grid-template-columns: repeat(4, minmax(0, 1fr));
-
   gap: 24px;
 }
 
 .mensagem-presentes {
   max-width: 650px;
-
   margin: 0 auto 30px;
-
   text-align: center;
 }
 
 .mensagem-presentes strong {
   display: block;
-
   margin-bottom: 8px;
-
   color: #bd4965;
-
   font-family: Georgia, serif;
-
   font-size: 1.05rem;
-
   font-weight: 400;
 }
 
 .mensagem-presentes p {
   margin: 0 0 8px;
-
   color: #5f5054;
-
   font-size: 0.9rem;
-
   line-height: 1.6;
 }
 
 .mensagem-presentes small {
   color: #8a777b;
-
   font-size: 0.68rem;
 }
 
 .presente-card {
   padding: 14px;
-
   min-height: 420px;
-
   display: flex;
   flex-direction: column;
-
   border: 1px solid #ead1d2;
   border-radius: 12px;
-
   background: rgba(255, 255, 255, 0.65);
-
   text-align: center;
 }
 
 .presente-card img {
   width: 100%;
-
   height: 300px;
-
   object-fit: contain;
-
   margin-bottom: 10px;
 }
 
 .presente-card h3 {
   margin: 8px 0 4px;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
 .presente-descricao {
   margin: 8px 0 14px;
-
   color: #6f5b60;
-
   font-size: 0.78rem;
   line-height: 1.5;
 
@@ -727,39 +671,26 @@ body {
 
 .comprar {
   flex: 1;
-
-  min-width: 90px;
-  
+  min-width: 90px;  
   padding: 7px 10px;
-
   border-radius: 18px;
-
   background: #d94f6c;
-
   color: white;
-
   text-decoration: none;
-
   font-size: 0.72rem;
-
   transition: transform 0.3s ease, background-color 0.3s ease;  
 }
 
 .comprar:hover {
   background-color:  #d46b80;
-
   transform: translateY(-2px);
 }
 
 .lojas {
   display: flex;
-
   flex-wrap: wrap;
-
   justify-content: center;
-
   gap: 5px;
-
   width: 100%;
 }
 
@@ -816,7 +747,6 @@ body {
 /* =========================================
    MENSAGEM — FOTO
    ========================================= */
-
 .mensagem-foto {
   position: relative;
   overflow: visible;
@@ -824,16 +754,12 @@ body {
 }
 
 /* SOMENTE A FOTO PRINCIPAL */
-
 .foto-mensagem-principal {
   width: 180px;
   height: 180px;
-
   object-fit: cover;
-
   border-radius: 50%;
   border: 2px solid #c99a5b;
-
   display: block;
 }
 
@@ -841,28 +767,21 @@ body {
 /* =========================================
    MENSAGEM — FLOR DA FOTO
    ========================================= */
-
 .floral-foto-mensagem {
   position: absolute;
-
   width: 217px;
   height: auto;
-
   left: -16px;
   bottom: -7px;
-
   z-index: 5;
-
   object-fit: contain;
-
   border: none !important;
   border-radius: 0 !important;
-
   box-shadow: none !important;
-
   pointer-events: none;
-  user-select: none;
+  user-select: none;  
 }
+
 .mensagem-conteudo {
   text-align: center;
   flex: 1;
@@ -905,25 +824,17 @@ body {
    ========================================= */
 .galeria-grid {
   flex: 1;
-
   display: grid;
-
   grid-template-columns: repeat(5, 1fr);
-
   gap: 6px;
-
   overflow: hidden;
 }
-
 
 .galeria-grid img {
   width: 100%;
   height: 300px;
-
   object-fit: cover;
-
   border-radius: 8px;
-
   cursor: pointer;
 
   transition:
@@ -934,7 +845,6 @@ body {
 
 .galeria-grid img:hover {
   transform: scale(1.03);
-
   filter: brightness(0.92);
 }
 
@@ -942,26 +852,17 @@ body {
 /* =========================================
    SETAS
    ========================================= */
-
 .galeria-seta {
   flex-shrink: 0;
-
   width: 38px;
   height: 38px;
-
   border: none;
   border-radius: 50%;
-
   background: #d98a9d;
-
   color: white;
-
   font-size: 1.8rem;
-
   line-height: 1;
-
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -974,7 +875,6 @@ body {
 
 .galeria-seta:hover {
   background: #c96f87;
-
   transform: scale(1.08);
 }
 
@@ -982,14 +882,10 @@ body {
 /* =========================================
    INDICADORES
    ========================================= */
-
 .galeria-indicadores {
   display: flex;
-
   justify-content: center;
-
   gap: 6px;
-
   margin-top: 15px;
 }
 
@@ -997,9 +893,7 @@ body {
 .indicador {
   width: 8px;
   height: 8px;
-
   border-radius: 50%;
-
   background: #ead1d2;
 }
 
@@ -1011,12 +905,9 @@ body {
 /* =========================================
    INFORMAÇÕES DA FESTA
    ========================================= */
-
 .informacoes {
   width: min(1100px, 92%);
-
   margin: 50px auto;
-
   padding: 70px 24px;
 }
 
@@ -1024,38 +915,26 @@ body {
 /* =========================================
    TÍTULO DA SEÇÃO
    ========================================= */
-
 .informacoes .titulo-secao {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 15px;
-
   margin-bottom: 45px;
 }
 
 .informacoes .titulo-secao h2 {
   margin: 0;
-
   color: #bd4965;
-
   font-family: Georgia, serif;
-
   font-size: 1.4rem;
-
   font-weight: 400;
-
   letter-spacing: 0.05em;
-
   text-align: center;
 }
 
 .informacoes .titulo-secao span {
   color: #d9a8ae;
-
   font-size: 1rem;
 }
 
@@ -1063,18 +942,12 @@ body {
 /* =========================================
    GRID DOS CARDS
    ========================================= */
-
 .informacoes-grid {
   width: 100%;
-
   max-width: 1100px;
-
   margin: 0 auto;
-
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 20px;
 }
 
@@ -1082,26 +955,16 @@ body {
 /* =========================================
    CARDS
    ========================================= */
-
 .informacoes-grid > div {
   min-height: 220px;
-
   padding: 30px 20px;
-
   border: 1px solid #ead1d2;
-
   border-radius: 20px;
-
   background: rgba(255, 255, 255, 0.7);
-
   text-align: center;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
 }
 
@@ -1109,10 +972,8 @@ body {
 /* =========================================
    ÍCONES DOS CARDS
    ========================================= */
-
 .informacoes-grid > div > span {
   font-size: 2rem;
-
   margin-bottom: 8px;
 }
 
@@ -1120,18 +981,12 @@ body {
 /* =========================================
    TÍTULOS DOS CARDS
    ========================================= */
-
 .informacoes-grid h3 {
   margin: 10px 0;
-
   color: #bd4965;
-
   font-family: Georgia, serif;
-
   font-size: 0.9rem;
-
   font-weight: 400;
-
   letter-spacing: 0.08em;
 }
 
@@ -1139,18 +994,13 @@ body {
 /* =========================================
    TEXTOS DOS CARDS
    ========================================= */
-
 .informacoes-grid p {
   margin: 5px 0;
-
   line-height: 1.6;
-
-  font-size: 0.9rem;
-}
+  font-size: 0.9rem;}
 
 .informacoes-grid small {
   color: #777;
-
   font-size: 0.8rem;
 }
 
@@ -1158,38 +1008,24 @@ body {
 /* =========================================
    BOTÃO — ABRIR MAPA
    ========================================= */
-
 .btn-mapa {
   display: inline-block;
-
   margin-top: 15px;
-
   padding: 10px 20px;
-
   border-radius: 20px;
-
   background: #b57c7c;
-
   color: #ffffff;
-
   text-decoration: none;
-
   font-size: 0.72rem;
-
   font-weight: 500;
-
   letter-spacing: 0.05em;
-
   text-transform: uppercase;
-
   box-shadow: 0 4px 10px rgba(181, 124, 124, 0.2);
-
   transition: all 0.3s ease;
 }
 
 .btn-mapa:hover {
   background: #c96f87;
-
   transform: translateY(-2px);
 }
 
@@ -1197,53 +1033,37 @@ body {
 /* =========================================
    CONFIRMAÇÃO DE PRESENÇA
    ========================================= */
-
 .confirmacao-card {
   text-align: center;
 }
 
 
 /* Ícone */
-
 .confirmacao-icone {
   display: block;
-
   font-size: 2rem;
-
   margin-bottom: 5px;
 }
 
 
 /* Título */
-
 .confirmacao-card h3 {
   margin: 10px 0;
-
   color: #bd4965;
-
   font-family: Georgia, serif;
-
   font-size: 0.9rem;
-
   font-weight: 400;
-
   letter-spacing: 0.08em;
 }
 
 
 /* Prazo */
-
 .confirmacao-prazo {
   max-width: 190px;
-
   margin: 5px auto 18px;
-
   color: #555;
-
   font-family: Georgia, serif;
-
   font-size: 0.85rem;
-
   line-height: 1.5;
 }
 
@@ -1255,102 +1075,67 @@ body {
 /* =========================================
    BOTÃO — WHATSAPP
    ========================================= */
-
 .btn-whatsapp {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 8px;
-
   margin-top: 5px;
-
   padding: 10px 18px;
-
   border-radius: 20px;
-
   background: #25d366;
-
   color: #ffffff;
-
   text-decoration: none;
-
   font-size: 0.75rem;
-
   font-weight: 600;
-
   letter-spacing: 0.02em;
-
   text-transform: none;
-
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
-
   transition: all 0.3s ease;
 }
 
 
 /* Ícone do WhatsApp */
-
 .btn-whatsapp img {
   width: 20px !important;
-
   height: 20px !important;
-
   object-fit: contain;
-
   border: none !important;
-
   border-radius: 0 !important;
-
   margin: 0;
-
   padding: 0;
 }
 
 
 /* Texto do botão */
-
 .btn-whatsapp span {
   color: #ffffff;
-
   font-size: 0.75rem;
 }
 
 
 /* Hover */
-
 .btn-whatsapp:hover {
   background: #20bd5a;
-
   transform: translateY(-2px);
-
   box-shadow: 0 6px 15px rgba(37, 211, 102, 0.25);
 }
 
 /* =========================================
    RODAPÉ
    ========================================= */
-
 footer {
   margin-top: 40px;
-
   padding: 25px;
-
   background: #d95873;
-
   color: white;
-
   text-align: center;
-
   font-family: Georgia, serif;
 }
 
 /* =========================================
    RESPONSIVIDADE
    ========================================= */
-
 @media (max-width: 900px) {
 
   .hero {
@@ -1405,7 +1190,6 @@ footer {
 
   .informacoes-grid > div {
     border-right: none;
-
     border-bottom: 1px solid #e5caca;
   } 
 }
@@ -1436,97 +1220,64 @@ footer {
 /* =========================================
    MODAL DE PRESENTE
    ========================================= */
-
 .modal-overlay {
   position: fixed;
-
   inset: 0;
-
   z-index: 1000;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   padding: 20px;
-
   background: rgba(36, 28, 30, 0.55);
 }
 
 .presente-modal {
   position: relative;
-
   width: 100%;
-
   max-width: 450px;
-
   max-height: 90vh;
-
   overflow-y: auto;
-
   padding: 25px;
-
   border-radius: 18px;
-
   background: #fffaf8;
-
   text-align: center;
-
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .presente-modal > img {
   width: 140px;
-
   height: 140px;
-
   object-fit: contain;
-
   margin-bottom: 10px;
 }
 
 .presente-modal h2 {
   margin: 5px 0 8px;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
-
   color: #5f4048;
 }
 
 .modal-subtitulo {
   margin-bottom: 15px;
-
   color: #6f5b60;
-
   font-size: 0.9rem;
 }
 
 .fechar-modal {
   position: absolute;
-
   top: 10px;
-
   right: 15px;
-
   border: none;
-
   background: transparent;
-
   color: #7f656b;
-
   font-size: 1.8rem;
-
   cursor: pointer;
 }
 
 /* =========================================
    OPÇÕES DE LOJAS
    ========================================= */
-
 .opcoes-lojas {
   margin-bottom: 22px;
 }
@@ -1537,45 +1288,29 @@ footer {
 
 .grupo-loja h3 {
   margin: 0 0 9px;
-
   color: #bd4965;
-
   font-family: Georgia, serif;
-
   font-size: 0.85rem;
-
   font-weight: 400;
-
   text-transform: uppercase;
-
   letter-spacing: 0.08em;
 }
 
 .opcoes-produtos {
   display: flex;
-
   flex-direction: column;
-
   gap: 7px;
 }
 
 .opcoes-produtos a {
   display: block;
-
   padding: 8px 12px;
-
   border-radius: 10px;
-
   border: 1px solid  #B78345;
-
   background: #eeeeee;
-
   font-weight: 400;
-
-  color: #B78345; 
-
+  color: #B78345;
   text-decoration: none;
-
   font-size: 0.75rem;
 
   transition:
@@ -1586,59 +1321,40 @@ footer {
 .opcoes-produtos a:hover {
   background: #B78345;
   color: white;
-
   transform: translateY(-2px);
 }
 
 .endereco-entrega {
   padding: 18px;
-
   border: 1px solid #ead1d2;
-
   border-radius: 12px;
-
   background: rgba(255, 255, 255, 0.7);
-
   text-align: left;
 }
 
 .endereco-entrega h3 {
   margin-top: 0;
-
   color: #bd4965;
-
   font-family: Georgia, serif;
-
   font-weight: 400;
 }
 
 .endereco-entrega p {
   white-space: pre-line;
-
   color: #5f5054;
-
   font-size: 0.8rem;
-
   line-height: 1.6;
 }
 
 .copiar-endereco {
   width: 100%;
-
   padding: 9px;
-
   border: none;
-
   border-radius: 20px;
-
   background: #B78345;
-
   color: white;
-
   cursor: pointer;
-
   font-size: 0.78rem;
-
   transition: background-color 0.3s ease;
 }
 
@@ -1650,7 +1366,6 @@ footer {
 /* =========================================
    MODAL — RESPONSIVIDADE
    ========================================= */
-
 @media (max-width: 600px) {
 
   .modal-overlay {
@@ -1688,7 +1403,6 @@ footer {
 /* =========================================
    CELULAR
    ========================================= */
-
 @media (max-width: 600px) {
 
   .presentes-grid {
@@ -1713,7 +1427,6 @@ footer {
 
   .galeria-grid {
     grid-template-columns: repeat(2, 1fr);
-
     gap: 8px;
   }
 
@@ -1737,10 +1450,8 @@ footer {
   .fechar-galeria {
     top: 12px;
     right: 12px;
-
     width: 38px;
     height: 38px;
-
     font-size: 1.5rem;
   }
 }
@@ -1750,25 +1461,19 @@ footer {
   .music-player {
     right: 12px;
     bottom: 12px;
-
     left: 12px;
-
     justify-content: center;
-
     padding: 8px 10px;
   }
 
   .music-info {
     min-width: 0;
-
     flex: 1;
   }
 
   .music-info strong {
     white-space: nowrap;
-
     overflow: hidden;
-
     text-overflow: ellipsis;
   }
 }
@@ -1776,63 +1481,42 @@ footer {
 /* =========================================
    MODAL DA GALERIA
    ========================================= */
-
 .galeria-modal {
   position: fixed;
-
   inset: 0;
-
   z-index: 1000;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   padding: 30px;
-
   background: rgba(36, 28, 30, 0.88);
-
   cursor: pointer;
 }
 
 .galeria-modal img {
   max-width: 90vw;
   max-height: 85vh;
-
   width: auto;
   height: auto;
-
   object-fit: contain;
-
   border-radius: 4px;
-
   box-shadow:
     0 10px 40px rgba(0, 0, 0, 0.35);
 }
 
 .fechar-galeria {
   position: absolute;
-
   top: 20px;
   right: 25px;
-
   width: 42px;
   height: 42px;
-
   border: none;
   border-radius: 50%;
-
   background: rgba(255, 255, 255, 0.9);
-
   color: #bd4965;
-
   font-size: 1.8rem;
-
   line-height: 1;
-
   cursor: pointer;
-
   transition:
     transform 0.3s ease,
     background-color 0.3s ease;
@@ -1840,52 +1524,41 @@ footer {
 
 .fechar-galeria:hover {
   transform: scale(1.08);
-
   background: white;
 }
 
 /* =========================================
    PLAYER DE MÚSICA
    ========================================= */
-
 .music-player {
   display: flex;
   align-items: center;
   gap: 6px;
-
   padding: 8px 14px;
-
   border: none;
   border-radius: 25px;
-
   background:  #d34d6b;
   color: white;
-
   box-shadow: 0 4px 12px rgba(120, 70, 80, 0.15);
 }
 
 .music-info {
   display: flex;
   flex-direction: column;
-
   min-width: 120px;
-
   text-align: center;
 }
 
 .music-label {
   color: white;
-
   font-family: Georgia, serif;
   font-size: 0.75rem;
   font-weight: 600;
-
   margin-bottom: 2px;
 }
 
 .music-info strong {
   color: white;
-
   font-family: Georgia, serif;
   font-size: 0.72rem;
   font-weight: 400;
@@ -1894,22 +1567,15 @@ footer {
 .music-control {
   width: 26px;
   height: 26px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: none;
   border-radius: 50%;
-
   background: transparent;
-
   color: white;
-
   font-size: 1rem;
-
   cursor: pointer;
-
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
@@ -1917,7 +1583,6 @@ footer {
 
 .music-control:hover {
   background: rgba(255, 255, 255, 0.18);
-
   transform: scale(1.08);
 }
 
@@ -1928,12 +1593,11 @@ footer {
 
 .music-play:hover {
   background: rgba(255, 255, 255, 0.3);
-
+}
   
   /* =========================================
    CAPA — TABLET
    ========================================= */
-
 @media (max-width: 900px) {
 
   .capa {
@@ -1942,9 +1606,7 @@ footer {
 
   .hero {
     grid-template-columns: 1fr;
-
     gap: 45px;
-
     max-width: 650px;
   }
 
@@ -2008,18 +1670,14 @@ footer {
 /* =========================================
    CAPA — CELULAR
    ========================================= */
-
 @media (max-width: 600px) {
-
   .capa {
     min-height: auto;
-
     padding: 35px 18px 60px;
   }
 
   .hero {
     min-height: auto;
-
     gap: 35px;
   }
 
@@ -2033,33 +1691,27 @@ footer {
 
   .anos {
     margin-left: 0;
-
     font-size: 3.3rem;
   }
 
   .frase-principal {
     max-width: 330px;
-
     font-size: 0.72rem;
-
     letter-spacing: 0.1em;
   }
 
   .proximos-capitulos {
     max-width: 330px;
-
     font-size: 0.65rem;
   }
 
   .hero-conteudo h1 {
     font-size: 4rem;
-
     margin-top: 24px;
   }
 
   .celebre p {
     font-size: 1rem;
-
     letter-spacing: 0.1em;
   }
 
@@ -2107,4 +1759,58 @@ footer {
 
     opacity: 0.55;
   }  
+  /* =========================================
+   HEADER — RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .header {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .menu {
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .header {
+    padding: 12px 15px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo {
+    align-items: center;
+  }
+
+  .logo span {
+    font-size: 2.2rem;
+  }
+
+  .logo small {
+    font-size: 0.9rem;
+  }
+
+  .menu {
+    width: 100%;
+    gap: 10px 16px;
+    justify-content: center;
+  }
+
+  .menu a {
+    font-size: 0.8rem;
+   }
+ }
 }

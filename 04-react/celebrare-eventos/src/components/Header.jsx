@@ -13,9 +13,10 @@ function Header() {
             <nav className="menu">
                 <a href="#inicio">Home</a>
                 <a href="#presentes">Presentes</a>
+                <a href="#mensagem">Mensagem</a>
                 <a href="#galeria">Galeria</a>
                 <a href="#local">Local da Festa</a>
-                <a href="#mensagem">Mensagem</a>
+                
             </nav>
 
             <MusicPlayer />
