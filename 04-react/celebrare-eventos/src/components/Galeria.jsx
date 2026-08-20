@@ -1,10 +1,11 @@
 // Galeria.jsx
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Galeria() {
   const [fotoSelecionada, setFotoSelecionada] = useState(null);
   const [indiceAtual, setIndiceAtual] = useState(0);
+  const [quantidadeVisivel, setQuantidadeVisivel] = useState(5);
 
   const fotos = [
     {
@@ -59,31 +60,67 @@ function Galeria() {
     },
   ];
 
-  const quantidadeVisivel = 5;
+  /* =========================================
+     QUANTIDADE DE FOTOS POR TELA
+     ========================================= */
+
+  useEffect(() => {
+    function atualizarQuantidade() {
+      const largura = window.innerWidth;
+
+      if (largura <= 600) {
+        setQuantidadeVisivel(1);
+      } else if (largura <= 900) {
+        setQuantidadeVisivel(3);
+      } else {
+        setQuantidadeVisivel(4);
+      }
+    }
+
+    atualizarQuantidade();
+
+    window.addEventListener("resize", atualizarQuantidade);
+
+    return () => {
+      window.removeEventListener("resize", atualizarQuantidade);
+    };
+  }, []);
+
+  /* =========================================
+     PRÓXIMA FOTO
+     anda apenas UMA posição
+     ========================================= */
 
   function proximaFoto() {
     setIndiceAtual((indice) => {
-      if (indice >= fotos.length - quantidadeVisivel) {
-        return 0;
-      }
-
-      return indice + 1;
+      return (indice + 1) % fotos.length;
     });
   }
+
+  /* =========================================
+     FOTO ANTERIOR
+     anda apenas UMA posição
+     ========================================= */
 
   function fotoAnterior() {
     setIndiceAtual((indice) => {
-      if (indice <= 0) {
-        return fotos.length - quantidadeVisivel;
-      }
-
-      return indice - 1;
+      return (indice - 1 + fotos.length) % fotos.length;
     });
   }
 
-  const fotosVisiveis = fotos.slice(
-    indiceAtual,
-    indiceAtual + quantidadeVisivel
+  /* =========================================
+     FOTOS VISÍVEIS
+     carrossel circular
+     ========================================= */
+
+  const fotosVisiveis = Array.from(
+    { length: quantidadeVisivel },
+    (_, deslocamento) => {
+      const indice =
+        (indiceAtual + deslocamento) % fotos.length;
+
+      return fotos[indice];
+    }
   );
 
   return (
@@ -103,16 +140,21 @@ function Galeria() {
           type="button"
           className="galeria-seta"
           onClick={fotoAnterior}
-          aria-label="Fotos anteriores"
+          aria-label="Foto anterior"
         >
           ‹
         </button>
 
-        <div className="galeria-grid">
+        <div
+          className="galeria-grid"
+          style={{
+            gridTemplateColumns: `repeat(${quantidadeVisivel}, minmax(0, 1fr))`,
+          }}
+        >
 
-          {fotosVisiveis.map((foto) => (
+          {fotosVisiveis.map((foto, posicao) => (
             <img
-              key={foto.id}
+              key={`${foto.id}-${posicao}`}
               src={foto.src}
               alt={foto.alt}
               onClick={() => setFotoSelecionada(foto)}
@@ -125,16 +167,18 @@ function Galeria() {
           type="button"
           className="galeria-seta"
           onClick={proximaFoto}
-          aria-label="Próximas fotos"
+          aria-label="Próxima foto"
         >
           ›
         </button>
 
       </div>
 
+      {/* INDICADORES */}
+
       <div className="galeria-indicadores">
 
-        {fotos.slice(0, 6).map((foto, indice) => (
+        {fotos.map((foto, indice) => (
           <span
             key={foto.id}
             className={
@@ -180,3 +224,4 @@ function Galeria() {
 }
 
 export default Galeria;
+

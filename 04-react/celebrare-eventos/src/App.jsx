@@ -1,6 +1,8 @@
 // App.jsx
 
 import "./App.css";
+import { useEffect } from "react";
+import { garantirUsuarioAnonimo } from "./lib/auth";
 
 import Header from "./components/Header";
 import Countdown from "./components/Countdown";
@@ -19,8 +21,30 @@ const flores = {
 };
 
 function App() {
+   useEffect(() => {
+  async function iniciarUsuario() {
+    try {
+      const usuario =
+        await garantirUsuarioAnonimo();
+
+      console.log(
+        "Usuário anônimo conectado:",
+        usuario.id
+      );
+    } catch (erro) {
+      console.error(
+        "Não foi possível conectar ao Supabase:",
+        erro
+      );
+    }
+  }
+
+  iniciarUsuario();
+}, []);
+
   return (
     <main className="convite">
+      
       <DecoracaoFloral
         imagem={flores.superiorEsquerdo}
         classe="floral-superior-esquerdo"
@@ -219,7 +243,7 @@ function App() {
   <h3>SUA PRESENÇA É ESPECIAL</h3>
 
   <p className="confirmacao-prazo">
-    Confirme sua presença até <strong>25/08/2026</strong>.
+    Confirme sua presença até <strong>28/08/2026</strong>.
   </p>
 
   <a

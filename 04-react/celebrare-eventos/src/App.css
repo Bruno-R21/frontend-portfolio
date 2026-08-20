@@ -1,3 +1,8 @@
+/* =====================================================
+   APP.CSS — ORGANIZADO
+   Estilos base primeiro; responsividade consolidada no final.
+   ===================================================== */
+
 body {
   background:
     radial-gradient(
@@ -28,22 +33,23 @@ body {
   ============================================== */
 
 .convite {
+  position: relative;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 /* =========================================
    CABEÇALHO
    ========================================= */
 .header {
+  position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 32px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 30px;
 }
 
@@ -58,7 +64,7 @@ body {
 }
 
 .logo span {
-  font-family:"Gabriola", serif;
+  font-family: "Gabriola", serif;
   font-size: 2.8rem;
   color: #c94d6a;
 }
@@ -67,7 +73,7 @@ body {
   font-size: 1.2rem;
   color: #b78345;
   letter-spacing: 0.08em;
-  font-family:"Great Vibes", serif;
+  font-family: "Great Vibes", serif;
 }
 
 /* =========================================
@@ -83,7 +89,7 @@ body {
   color: #241c1e;
   text-decoration: none;
   font-family: Georgia, serif;
-  font-size: 1.32rem ;
+  font-size: 1.32rem;
   font-weight: lighter;
   transition: color 0.3s ease;
 }
@@ -91,7 +97,6 @@ body {
 .menu a:hover {
   color: #c94d6a;
 }
-
 
 /* =========================================
    CAPA / HERO
@@ -146,24 +151,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 
 /* Moldura externa */
 .moldura-foto {
   position: relative;
+  z-index: 1;
   width: min(430px, 100%);
   aspect-ratio: 0.78;
   padding: 9px;
   border: 2px solid #c8a15a;
   border-radius: 220px 220px 28px 28px;
-  background:
-    linear-gradient(
-      135deg,
-      #fffaf6,
-      #f4e5d4
-    );
-  box-shadow:
-    0 8px 25px rgba(110, 70, 70, 0.12);
+  background: linear-gradient(135deg, #fffaf6, #f4e5d4);
+  box-shadow: 0 8px 25px rgba(110, 70, 70, 0.12);
 }
 
 /* Segunda moldura */
@@ -214,7 +215,7 @@ body {
 
 .numero {
   display: block;
-  margin-top: 38px; 
+  margin-top: 38px;
   color: #c94768;
   font-family: "Cinzel", serif;
   font-size: clamp(7.5rem, 30vw, 15rem);
@@ -228,7 +229,7 @@ body {
 .anos {
   position: relative;
   display: inline-block;
-  margin-top: -18px; 
+  margin-top: -18px;
   color: #b78345;
   font-family: "Great Vibes", cursive;
   font-size: clamp(3.8rem, 28vw, 7.5rem);
@@ -245,7 +246,7 @@ body {
   right: -25px;
   color: #c94768;
   font-family: Georgia, serif;
-  font-size: 1.1rem; 
+  font-size: 1.1rem;
   transform: rotate(8deg);
 }
 
@@ -346,51 +347,56 @@ body {
   object-fit: contain;
 }
 
-
 /* =========================================
    FLORES — CAPA
    ========================================= */
 .floral-superior-esquerdo {
-  top: -10px;
-  left: -10px;
-  width: 300px;
+  top: 0;
+  left: 0;
+
+  width: clamp(170px, 18vw, 300px);
+
   transform: rotate(-3deg);
+
+  transform-origin: top left;
 }
 
 .floral-superior-direito {
-  top: -10px;
-  right: -10px;
-  width: 300px;
+  top: 0;
+  right: 0;
+
+  width: clamp(170px, 18vw, 300px);
+
   transform: rotate(3deg);
+
+  transform-origin: top right;
 }
 
 .floral-inferior-esquerdo {
-  bottom: -10px;
-  left: -10px;
-  width: 300px;
+  left: 0;
+  bottom: 0;
+
+  width: clamp(160px, 17vw, 290px);
+
   transform: rotate(3deg);
+
+  transform-origin: bottom left;
 }
 
 .floral-inferior-direito {
-  right: -10px;
-  bottom: -10px;
-  width: 300px;
+  right: 0;
+  bottom: 0;
+
+  width: clamp(160px, 17vw, 290px);
+
   transform: rotate(-3deg);
+
+  transform-origin: bottom right;
 }
 
 /* =========================================
    FLOR — FOTO PRINCIPAL
    ========================================= */
-.hero-foto {
-  position: relative;
-  overflow: visible;
-}
-
-.moldura-foto {
-  position: relative;
-  z-index: 1;
-}
-
 .floral-foto-principal {
   position: absolute;
   width: 250px;
@@ -403,65 +409,43 @@ body {
 }
 
 /* =========================================
-   FLOR DECORATIVA — PÁGINA INTEIRA
-   ========================================= */
-.convite {
-  position: relative;
-  overflow: hidden;
-}
-
-/* =========================================
    SEÇÕES DECORADAS
    ========================================= */
 .secao-decorada {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
-
 
 /* =========================================
    FLORES LATERAIS — OUTRAS SEÇÕES
    ========================================= */
-.floral-lateral-esquerda {  
-  left: -45px;
-  top: 15%;
+.floral-lateral-esquerda,
+.floral-lateral-direita {
+  position: absolute;
+  width: 380px;
+  height: auto;
+  opacity: 0.9;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.floral-lateral-esquerda {
+  left: -10px;
+  top: 7%;
   width: 300px;
   transform: rotate(-12deg);
 }
 
 .floral-lateral-direita {
-  right: -45px;
-  bottom: 10%;
+  right: -10px;
+  bottom: 1%;
   width: 300px;
-  transform: rotate(12deg);
-}
-
-.floral-foto-mensagem {
-  position: absolute;
-  width: 30px;
-  left: -35px;
-  bottom: -20px;
-  z-index: 5;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* =========================================
-   CONTADOR — ÁREA PRINCIPAL
-   ========================================= */
-.contador-secao {
-  position: relative;
-  overflow: hidden;
+  transform: rotate(-12deg);
 }
 
 /* =========================================
    FLOR — DENTRO DAS CAIXAS DO CONTADOR
    ========================================= */
-.contador-item {
-  position: relative;
-  overflow: hidden;
-}
-
 .floral-contador {
   position: absolute;
   left: 1px;
@@ -481,26 +465,21 @@ body {
   z-index: 2;
 }
 
-
 /* =========================================
    CONTEÚDO DO CONTADOR
    ========================================= */
-.contador-item strong,
-.contador-item span {
-  position: relative;
-  z-index: 2;
-}
-
 /* =========================================
    CONTADOR
    ========================================= */
 .contador-secao {
+  position: relative;
   width: min(1000px, 90%);
   margin: 30px auto 50px;
   padding: 20px;
   border: 1px solid #dfb6b9;
   border-radius: 25px;
   text-align: center;
+  overflow: hidden;
 }
 
 .contador-secao h2 {
@@ -533,23 +512,23 @@ body {
   padding: 28px 15px 30px;
   border: 2px solid #d9a8ae;
   border-radius: 24px;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 248, 246, 0.9),
-      rgba(252, 229, 233, 0.65)
-    );
-  box-shadow:
-    0 10px 30px rgba(181, 110, 125, 0.08);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 248, 246, 0.9),
+    rgba(252, 229, 233, 0.65)
+  );
+  box-shadow: 0 10px 30px rgba(181, 110, 125, 0.08);
   text-align: center;
   overflow: hidden;
 }
 
 .contador-item {
+  position: relative;
   padding: 15px;
   border: 1px solid #efd7d5;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
 }
 
 .contador-item strong {
@@ -595,7 +574,6 @@ body {
 .titulo-secao span {
   color: #c9a56d;
 }
-
 
 /* =========================================
    PRESENTES
@@ -671,18 +649,20 @@ body {
 
 .comprar {
   flex: 1;
-  min-width: 90px;  
+  min-width: 90px;
   padding: 7px 10px;
   border-radius: 18px;
   background: #d94f6c;
   color: white;
   text-decoration: none;
   font-size: 0.72rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;  
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .comprar:hover {
-  background-color:  #d46b80;
+  background-color: #d46b80;
   transform: translateY(-2px);
 }
 
@@ -710,10 +690,10 @@ body {
   align-self: center;
   margin-top: auto;
   padding: 7px 18px;
-  border: 1px solid #B78345;
+  border: 1px solid #b78345;
   border-radius: 18px;
   background: transparent;
-  color: #956A38;
+  color: #956a38;
   font-size: 0.75rem;
   cursor: pointer;
   transition:
@@ -723,11 +703,10 @@ body {
 }
 
 .detalhes-presente:hover {
-  background: #B78345;
+  background: #b78345;
   color: white;
   transform: translateY(-2px);
 }
-
 
 /* =========================================
    MENSAGEM
@@ -763,7 +742,6 @@ body {
   display: block;
 }
 
-
 /* =========================================
    MENSAGEM — FLOR DA FOTO
    ========================================= */
@@ -779,7 +757,7 @@ body {
   border-radius: 0 !important;
   box-shadow: none !important;
   pointer-events: none;
-  user-select: none;  
+  user-select: none;
 }
 
 .mensagem-conteudo {
@@ -811,73 +789,59 @@ body {
    ========================================= */
 .galeria-carrossel {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1150px;
   margin: 40px auto 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
 }
 
-
 /* =========================================
-   ÁREA DAS FOTOS
+   FOTOS DO CARROSSEL
    ========================================= */
 .galeria-grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 6px;
-  overflow: hidden;
+  gap: 8px;
+  min-width: 0;
 }
 
+/* FOTOS */
 .galeria-grid img {
   width: 100%;
   height: 300px;
+  display: block;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-
   transition:
     transform 0.3s ease,
     filter 0.3s ease;
 }
 
-
 .galeria-grid img:hover {
-  transform: scale(1.03);
-  filter: brightness(0.92);
+  transform: scale(1.02);
+  filter: brightness(0.94);
 }
-
 
 /* =========================================
    SETAS
    ========================================= */
 .galeria-seta {
-  flex-shrink: 0;
-  width: 38px;
-  height: 38px;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 50%;
   background: #d98a9d;
   color: white;
   font-size: 1.8rem;
-  line-height: 1;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
 }
-
-
-.galeria-seta:hover {
-  background: #c96f87;
-  transform: scale(1.08);
-}
-
 
 /* =========================================
    INDICADORES
@@ -889,14 +853,12 @@ body {
   margin-top: 15px;
 }
 
-
 .indicador {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #ead1d2;
 }
-
 
 .indicador.ativo {
   background: #d98a9d;
@@ -910,7 +872,6 @@ body {
   margin: 50px auto;
   padding: 70px 24px;
 }
-
 
 /* =========================================
    TÍTULO DA SEÇÃO
@@ -938,7 +899,6 @@ body {
   font-size: 1rem;
 }
 
-
 /* =========================================
    GRID DOS CARDS
    ========================================= */
@@ -950,7 +910,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-
 
 /* =========================================
    CARDS
@@ -968,7 +927,6 @@ body {
   justify-content: center;
 }
 
-
 /* =========================================
    ÍCONES DOS CARDS
    ========================================= */
@@ -976,7 +934,6 @@ body {
   font-size: 2rem;
   margin-bottom: 8px;
 }
-
 
 /* =========================================
    TÍTULOS DOS CARDS
@@ -990,20 +947,19 @@ body {
   letter-spacing: 0.08em;
 }
 
-
 /* =========================================
    TEXTOS DOS CARDS
    ========================================= */
 .informacoes-grid p {
   margin: 5px 0;
   line-height: 1.6;
-  font-size: 0.9rem;}
+  font-size: 1.1rem;
+}
 
 .informacoes-grid small {
   color: #777;
   font-size: 0.8rem;
 }
-
 
 /* =========================================
    BOTÃO — ABRIR MAPA
@@ -1029,7 +985,6 @@ body {
   transform: translateY(-2px);
 }
 
-
 /* =========================================
    CONFIRMAÇÃO DE PRESENÇA
    ========================================= */
@@ -1037,14 +992,12 @@ body {
   text-align: center;
 }
 
-
 /* Ícone */
 .confirmacao-icone {
   display: block;
   font-size: 2rem;
   margin-bottom: 5px;
 }
-
 
 /* Título */
 .confirmacao-card h3 {
@@ -1055,7 +1008,6 @@ body {
   font-weight: 400;
   letter-spacing: 0.08em;
 }
-
 
 /* Prazo */
 .confirmacao-prazo {
@@ -1070,7 +1022,6 @@ body {
 .confirmacao-prazo strong {
   color: #bd4965;
 }
-
 
 /* =========================================
    BOTÃO — WHATSAPP
@@ -1094,7 +1045,6 @@ body {
   transition: all 0.3s ease;
 }
 
-
 /* Ícone do WhatsApp */
 .btn-whatsapp img {
   width: 20px !important;
@@ -1106,13 +1056,11 @@ body {
   padding: 0;
 }
 
-
 /* Texto do botão */
 .btn-whatsapp span {
   color: #ffffff;
   font-size: 0.75rem;
 }
-
 
 /* Hover */
 .btn-whatsapp:hover {
@@ -1131,90 +1079,6 @@ footer {
   color: white;
   text-align: center;
   font-family: Georgia, serif;
-}
-
-/* =========================================
-   RESPONSIVIDADE
-   ========================================= */
-@media (max-width: 900px) {
-
-  .hero {
-    grid-template-columns: 1fr;
-
-    gap: 30px;
-  }
-
-  .presentes-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .galeria-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .informacoes-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .informacoes-grid > div:nth-child(2) {
-    border-right: none;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .hero {
-    padding: 30px 15px;
-  }
-
-  .contador {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .presentes-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .galeria-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .mensagem-secao {
-    flex-direction: column;
-  }
-
-  .informacoes-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .informacoes-grid > div {
-    border-right: none;
-    border-bottom: 1px solid #e5caca;
-  } 
-}
-
-@media (max-width: 900px) {
-
-  .informacoes-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-@media (max-width: 600px) {
-
-  .informacoes-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-
-  .presentes-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
 }
 
 /* =========================================
@@ -1276,6 +1140,188 @@ footer {
 }
 
 /* =========================================
+   OPÇÕES DOS PRESENTES — SUPABASE
+   ========================================= */
+
+.opcao-presente {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  width: 100%;
+
+  padding: 10px;
+
+  border: 1px solid #ead1d2;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================
+   LINK PARA A LOJA
+   ========================================= */
+
+.opcoes-produtos .link-loja {
+  display: block;
+
+  width: 100%;
+
+  padding: 9px 12px;
+
+  border: 1px solid #b78345;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #956a38;
+
+  text-decoration: none;
+
+  font-size: 0.75rem;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.opcoes-produtos .link-loja:hover {
+  background: #b78345;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   BOTÃO — JÁ COMPREI
+   ========================================= */
+
+.marcar-presente {
+  width: 100%;
+
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #c95b74;
+
+  color: #ffffff;
+
+  font-size: 0.72rem;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.marcar-presente:hover {
+  background: #b94d68;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   PRESENTE ESCOLHIDO
+   ========================================= */
+
+.opcao-escolhida {
+  background: rgba(245, 240, 236, 0.8);
+
+  border-color: #dfd5ce;
+}
+
+
+/* =========================================
+   STATUS
+   ========================================= */
+
+.status-presente {
+  width: 100%;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  background: #eeeeee;
+
+  color: #777777;
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.status-meu {
+  background: #edf7ef;
+
+  color: #42764b;
+}
+
+
+/* =========================================
+   DESFAZER
+   ========================================= */
+
+.desfazer-presente {
+  width: 100%;
+
+  padding: 7px 12px;
+
+  border: 1px solid #bd4965;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #bd4965;
+
+  font-size: 0.7rem;
+
+  cursor: pointer;
+}
+
+.desfazer-presente:hover {
+  background: #bd4965;
+
+  color: white;
+}
+
+/* =========================================
+   BOTÕES DESABILITADOS
+   ========================================= */
+
+.marcar-presente:disabled,
+.desfazer-presente:disabled {
+  opacity: 0.55;
+
+  cursor: wait;
+}
+
+
+/* =========================================
+   CARREGANDO
+   ========================================= */
+
+.carregando-presentes {
+  margin: 20px 0;
+
+  color: #777;
+
+  font-size: 0.8rem;
+
+  text-align: center;
+}
+
+/* =========================================
    OPÇÕES DE LOJAS
    ========================================= */
 .opcoes-lojas {
@@ -1306,10 +1352,10 @@ footer {
   display: block;
   padding: 8px 12px;
   border-radius: 10px;
-  border: 1px solid  #B78345;
+  border: 1px solid #b78345;
   background: #eeeeee;
   font-weight: 400;
-  color: #B78345;
+  color: #b78345;
   text-decoration: none;
   font-size: 0.75rem;
 
@@ -1319,7 +1365,7 @@ footer {
 }
 
 .opcoes-produtos a:hover {
-  background: #B78345;
+  background: #b78345;
   color: white;
   transform: translateY(-2px);
 }
@@ -1351,7 +1397,7 @@ footer {
   padding: 9px;
   border: none;
   border-radius: 20px;
-  background: #B78345;
+  background: #b78345;
   color: white;
   cursor: pointer;
   font-size: 0.78rem;
@@ -1359,123 +1405,7 @@ footer {
 }
 
 .copiar-endereco:hover {
-  background: #956A38;
-}
-
-
-/* =========================================
-   MODAL — RESPONSIVIDADE
-   ========================================= */
-@media (max-width: 600px) {
-
-  .modal-overlay {
-    padding: 15px;
-  }
-
-  .presente-modal {
-    width: 100%;
-    max-height: 90vh;
-
-    overflow-y: auto;
-
-    padding: 24px 18px;
-  }
-
-  .presente-modal img {
-    max-height: 180px;
-  }
-
-  .presente-modal h2 {
-    font-size: 1.5rem;
-  }
-
-  .opcoes-produtos a {
-    padding: 8px 10px;
-    font-size: 0.72rem;
-  }
-
-  .endereco-entrega {
-    padding: 14px;
-  }
-
-}
-
-/* =========================================
-   CELULAR
-   ========================================= */
-@media (max-width: 600px) {
-
-  .presentes-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .presente-card {
-    padding: 12px;
-  }
-
-  .presente-card img {
-    height: 170px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .galeria {
-    padding: 60px 18px;
-  }
-
-  .galeria-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .galeria-grid img {
-    height: 160px;
-  }
-
-}
-
-@media (max-width: 600px) {
-
-  .galeria-modal {
-    padding: 15px;
-  }
-
-  .galeria-modal img {
-    max-width: 94vw;
-    max-height: 80vh;
-  }
-
-  .fechar-galeria {
-    top: 12px;
-    right: 12px;
-    width: 38px;
-    height: 38px;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .music-player {
-    right: 12px;
-    bottom: 12px;
-    left: 12px;
-    justify-content: center;
-    padding: 8px 10px;
-  }
-
-  .music-info {
-    min-width: 0;
-    flex: 1;
-  }
-
-  .music-info strong {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  background: #956a38;
 }
 
 /* =========================================
@@ -1500,8 +1430,7 @@ footer {
   height: auto;
   object-fit: contain;
   border-radius: 4px;
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }
 
 .fechar-galeria {
@@ -1537,7 +1466,7 @@ footer {
   padding: 8px 14px;
   border: none;
   border-radius: 25px;
-  background:  #d34d6b;
+  background: #d34d6b;
   color: white;
   box-shadow: 0 4px 12px rgba(120, 70, 80, 0.15);
 }
@@ -1594,223 +1523,641 @@ footer {
 .music-play:hover {
   background: rgba(255, 255, 255, 0.3);
 }
-  
-  /* =========================================
-   CAPA — TABLET
-   ========================================= */
-@media (max-width: 900px) {
 
-  .capa {
-    padding: 60px 30px;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 45px;
-    max-width: 650px;
-  }
-
-  .hero-foto {
-    order: 1;
-  }
-
-  .hero-conteudo {
-    order: 2;
-
-    align-items: center;
-
-    text-align: center;
-  }
-
-  .idade {
-    align-items: center;
-  }
-
-  .anos {
-    margin-left: 0;
-  }
-
-  .celebre {
-    justify-content: center;
-  }
-
-  .floral-superior-esquerdo {
-    width: 190px;
-  }
-
-  .floral-superior-direito {
-    width: 220px;
-  }
-
-  .floral-inferior-esquerdo {
-    width: 180px;
-  }
-
-  .floral-inferior-direito {
-    width: 200px;
-  }
-
-  /* Flores das outras seções */
-
-  .floral-lateral-esquerda,
-  .floral-lateral-direita {
-    width: 110px;
-  }
-
-  .floral-contador {
-    width: 55px;
-    height: 55px;
-    left: 3px;
-    bottom: 3px;
-  }
-
-}
-
-
-/* =========================================
-   CAPA — CELULAR
-   ========================================= */
-@media (max-width: 600px) {
-  .capa {
-    min-height: auto;
-    padding: 35px 18px 60px;
-  }
-
-  .hero {
-    min-height: auto;
-    gap: 35px;
-  }
-
-  .moldura-foto {
-    width: min(330px, 90vw);
-  }
-
-  .numero {
-    font-size: 6.5rem;
-  }
-
-  .anos {
-    margin-left: 0;
-    font-size: 3.3rem;
-  }
-
-  .frase-principal {
-    max-width: 330px;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-  }
-
-  .proximos-capitulos {
-    max-width: 330px;
-    font-size: 0.65rem;
-  }
-
-  .hero-conteudo h1 {
-    font-size: 4rem;
-    margin-top: 24px;
-  }
-
-  .celebre p {
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-  }
-
-  .celebre span {
-    width: 35px;
-  }
-
-  .floral-superior-esquerdo {
-    width: 130px;
-  }
-
-  .floral-superior-direito {
-    width: 150px;
-  }
-
-  .floral-inferior-esquerdo {
-    width: 130px;
-  }
-
-  .floral-inferior-direito {
-    width: 140px;
-  }
-
-  /* Flores das outras seções */
-
-  .floral-lateral-esquerda,
-  .floral-lateral-direita {
-    width: 75px;
-    opacity: 0.65;
-  }
-
-  .floral-foto-principal {
-    width: 75px;
-
-    right: -20px;
-    bottom: -10px;
-  }
-
-  .floral-contador {
-    width: 45px;
-    height: 45px;
-
-    left: 2px;
-    bottom: 2px;
-
-    opacity: 0.55;
-  }  
-  /* =========================================
-   HEADER — RESPONSIVIDADE
-   ========================================= */
+/* ==================================================
+     RESPONSIVIDADE FINAL — TABLET
+     =============================================== */
 
 @media (max-width: 900px) {
+    /* ---------- GERAL ---------- */
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
 
-  .header {
-    padding: 14px 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    .convite {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* ---------- HEADER ---------- */
+    .header {
+      position: relative;
+      width: 100%;
+      padding: 18px 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      z-index: 20;
+      gap: 18px;
+    }
+
+    .logo {
+      align-items: center;
+    }
+
+    .menu {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+    }
+
+    .menu a {
+      font-size: 1rem;
+    }
+
+    /* ---------- HERO ---------- */
+    .capa {
+      min-height: auto;
+      padding: 45px 24px 60px;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 680px;
+      min-height: auto;
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    .hero-foto {
+      order: 1;
+    }
+
+    .hero-conteudo {
+      order: 2;
+      width: 100%;
+    }
+
+    .moldura-foto {
+      width: min(400px, 80vw);
+    }
+
+    .numero {
+      margin-top: 20px;
+      font-size: clamp(7rem, 22vw, 10rem);
+    }
+
+    .anos {
+      font-size: clamp(4rem, 12vw, 5.5rem);
+    }
+
+    .frase-principal,
+    .proximos-capitulos {
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .hero-conteudo h1 {
+      font-size: clamp(4rem, 10vw, 5rem);
+    }
+
+    /* ---------- CONTADOR ---------- */
+    .contador-secao {
+      width: min(720px, 92%);
+      padding: 18px;
+    }
+
+    .contador {
+      width: 100%;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      padding: 20px 14px;
+    }
+
+    .contador-item {
+      min-width: 0;
+      padding: 15px 8px;
+    }
+
+    /* ---------- PRESENTES ---------- */
+    .secao {
+      padding: 45px 24px;
+    }
+
+    .presentes-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .presente-card {
+      min-height: 0;
+      padding: 14px;
+    }
+
+    .presente-card img {
+      height: 230px;
+    }
+
+    /* ---------- MENSAGEM ---------- */
+    .mensagem-secao {
+      width: min(720px, 92%);
+      padding: 35px 30px;
+      gap: 30px;
+    }
+
+    /* ---------- GALERIA ---------- */
+   .galeria-carrossel {
+    max-width: 760px;
+    gap: 10px;
   }
 
-  .menu {
-    gap: 18px;
-    justify-content: center;
-    flex-wrap: wrap;
+  .galeria-grid {
+    gap: 8px;
   }
 
-  .menu a {
-    font-size: 0.95rem;
+  .galeria-grid img {
+    height: 300px;
   }
-}
+
+  .galeria-seta {
+    width: 38px;
+    height: 38px;
+    font-size: 1.6rem;
+  }
+
+    /* ---------- INFORMAÇÕES ---------- */
+    .informacoes {
+      width: min(760px, 92%);
+      padding: 60px 20px;
+    }
+
+    .informacoes-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    /* ---------- FLORES ---------- */
+    .floral-superior-esquerdo {
+      width: 190px;
+    }
+
+    .floral-superior-direito {
+      width: 190px;
+    }
+
+    .floral-inferior-esquerdo {
+      width: 170px;
+    }
+
+    .floral-inferior-direito {
+      width: 170px;
+    }
+
+    .floral-lateral-esquerda,
+    .floral-lateral-direita {
+      width: 120px;
+    }
+
+    .floral-foto-principal {
+      width: 180px;
+      right: auto;
+      left: -25px;
+      bottom: -25px;
+    }
+  }
+
+/* ================================================
+   RESPONSIVIDADE FINAL — CELULAR
+   =================================================*/
 
 @media (max-width: 600px) {
+    /* ---------- GERAL ---------- */
+    html,
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
 
-  .header {
-    padding: 12px 15px;
-    flex-direction: column;
-    gap: 12px;
+    body {
+      min-width: 0;
+    }
+
+    /* ---------- HEADER ---------- */
+    .header {
+      position: relative;
+      padding: 14px 12px;
+      flex-direction: column;
+      z-index: 20;
+      gap: 12px;
+    }
+
+    .logo span {
+      font-size: 2.4rem;
+    }
+
+    .logo small {
+      font-size: 1rem;
+    }
+
+    .menu {
+      width: 100%;
+      gap: 8px 15px;
+      justify-content: center;
+    }
+
+    .menu a {
+      font-size: 0.88rem;
+    }
+
+    .music-player {
+      width: min(300px, 92%);
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    /* ---------- CAPA ---------- */
+    .capa {
+      padding: 30px 15px 45px;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+      gap: 28px;
+    }
+
+    .hero-foto {
+      width: 100%;
+    }
+
+    .moldura-foto {
+      width: min(320px, 86vw);
+    }
+
+    .hero-conteudo {
+      width: 100%;
+      padding: 0 8px;
+    }
+
+    .idade {
+      width: 100%;
+      text-align: center;
+    }
+
+    .numero {
+      margin-top: 10px;
+      font-size: clamp(6rem, 32vw, 7.5rem);
+      line-height: 0.82;
+    }
+
+    .anos {
+      margin-top: -5px;
+      font-size: clamp(3rem, 17vw, 4rem);
+      line-height: 0.8;
+    }
+
+    .anos::after {
+      right: -20px;
+    }
+
+    .frase-principal {
+      max-width: 320px;
+      margin: 20px auto 8px;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      line-height: 1.5;
+    }
+
+    .proximos-capitulos {
+      max-width: 320px;
+      font-size: 0.67rem;
+    }
+
+    .hero-conteudo h1 {
+      margin-top: 24px;
+      font-size: clamp(3.2rem, 15vw, 4rem);
+    }
+
+    .celebre {
+      gap: 12px;
+    }
+
+    .celebre span {
+      width: 30px;
+    }
+
+    .celebre p {
+      font-size: 0.92rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* ---------- CONTADOR ---------- */
+    .contador-secao {
+      width: 92%;
+      margin: 25px auto 40px;
+      padding: 16px 10px;
+    }
+
+    .contador-secao h2 {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .contador {
+      width: 100%;
+      margin: 12px auto;
+      padding: 15px 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .contador-item {
+      min-height: 100px;
+      padding: 14px 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contador-item strong {
+      font-size: 2.2rem;
+    }
+
+    .contador-item span {
+      font-size: 0.68rem;
+    }
+
+    .floral-contador {
+      width: 48px;
+      height: 48px;
+      left: 0;
+      bottom: 0;
+      opacity: 0.55;
+    }
+
+    /* ---------- TÍTULOS ---------- */
+    .titulo-secao {
+      width: 100%;
+      gap: 8px;
+    }
+
+    .titulo-secao h2 {
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+
+    .titulo-secao > span {
+      flex-shrink: 1;
+      font-size: 0.65rem;
+    }
+
+    /* ---------- PRESENTES ---------- */
+    .secao {
+      width: 100%;
+      padding: 45px 15px;
+    }
+
+    .mensagem-presentes {
+      max-width: 310px;
+    }
+
+    .presentes-grid {
+      width: 100%;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .presente-card {
+      width: 100%;
+      min-height: 0;
+      padding: 14px;
+    }
+
+    .presente-card img {
+    height: 190px;
   }
 
-  .logo {
-    align-items: center;
+    .presente-card h3 {
+      margin: 10px 0 15px;
+      font-size: 1.15rem;
+    }
+
+    .detalhes-presente {
+      margin-top: 10px;
+    }
+
+    /* ---------- MENSAGEM ---------- */
+    .mensagem-secao {
+      width: 92%;
+      margin: 40px auto;
+      padding: 35px 18px;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .mensagem-foto {
+      margin: 0 auto;
+    }
+
+    .foto-mensagem-principal {
+      width: 160px;
+      height: 160px;
+    }
+
+    .floral-foto-mensagem {
+      width: 190px;
+      left: -15px;
+      bottom: -7px;
+    }
+
+    .mensagem-conteudo h2 {
+      font-size: 1.15rem;
+      line-height: 1.4;
+    }
+
+    .mensagem-conteudo p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* ---------- GALERIA ---------- */
+    .galeria {
+    padding: 50px 10px;
   }
 
-  .logo span {
-    font-size: 2.2rem;
-  }
-
-  .logo small {
-    font-size: 0.9rem;
-  }
-
-  .menu {
+  .galeria-carrossel {
     width: 100%;
-    gap: 10px 16px;
-    justify-content: center;
+    max-width: 350px;
+    margin: 25px auto 0;
+    gap: 6px;
   }
 
-  .menu a {
-    font-size: 0.8rem;
-   }
- }
-}
+  .galeria-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .galeria-grid img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .galeria-seta {
+    width: 34px;
+    height: 34px;
+    font-size: 1.5rem;
+  }
+
+  .galeria-indicadores {
+    margin-top: 14px;
+    gap: 5px;
+  }
+
+  .indicador {
+    width: 7px;
+    height: 7px;
+  }
+
+    /* ---------- INFORMAÇÕES ---------- */
+    .informacoes {
+      width: 92%;
+      margin: 35px auto;
+      padding: 45px 10px;
+    }
+
+    .informacoes .titulo-secao {
+      margin-bottom: 30px;
+    }
+
+    .informacoes .titulo-secao h2 {
+      font-size: 1rem;
+    }
+
+    .informacoes-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .informacoes-grid > div {
+      width: 100%;
+      min-height: 180px;
+      padding: 25px 15px;
+      border-right: 1px solid #ead1d2;
+      border-bottom: 1px solid #ead1d2;
+    }
+
+    .confirmacao-prazo {
+      max-width: 240px;
+    }
+
+    .btn-whatsapp {
+      max-width: 100%;
+      padding: 11px 16px;
+    }
+
+    /* ---------- MODAL PRESENTE ---------- */
+    .modal-overlay {
+      padding: 10px;
+    }
+
+    .presente-modal {
+      width: 100%; 
+      max-width: 360px;
+      max-height: 88vh;
+      padding: 22px 15px;
+    }
+
+    .presente-modal > img {
+      width: 110px;
+      height: 110px;
+    }
+
+    .presente-modal h2 {
+      font-size: 1.25rem;
+    }
+
+    .opcoes-produtos a {
+      width: 100%;
+      padding: 10px;
+      font-size: 0.72rem;
+      line-height: 1.35;
+    }
+
+    .endereco-entrega {
+      padding: 14px;
+    }
+
+    /* ---------- FLORES ---------- */
+    .floral-superior-esquerdo {
+      width: 115px;
+    }
+
+    .floral-superior-direito {
+      width: 115px;
+    }
+
+    .floral-inferior-esquerdo {
+      width: 105px;
+    }
+
+    .floral-inferior-direito {
+      width: 105px;
+    }
+
+    .floral-lateral-esquerda,
+    .floral-lateral-direita {
+      width: 70px;
+      opacity: 0.55;
+    }
+
+    .floral-foto-principal {
+      width: 130px;
+      left: 18px;
+      right: auto;
+      bottom: -18px;
+    }
+
+
+    /* ---------- MODAL DA GALERIA ---------- */
+    .galeria-modal {
+      padding: 15px;
+    }
+
+    .galeria-modal img {
+      max-width: 94vw;
+      max-height: 80vh;
+    }
+
+    .fechar-galeria {
+      top: 12px;
+      right: 12px;
+      width: 38px;
+      height: 38px;
+      font-size: 1.5rem;
+    }
+
+    /* ---------- PLAYER DE MÚSICA ---------- */
+    .music-player {
+      padding: 8px 10px;
+    }
+
+    .music-info {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .music-info strong {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ---------- RODAPÉ ---------- */
+    footer {
+      width: 100%;
+      margin-top: 30px;
+      padding: 25px 15px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  }
